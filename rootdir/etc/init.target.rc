@@ -75,7 +75,6 @@ on post-fs
 
 on late-fs
     # Start services for bootanim
-    start servicemanager
     start surfaceflinger
     start bootanim
 
