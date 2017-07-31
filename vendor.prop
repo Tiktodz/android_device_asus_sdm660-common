@@ -96,6 +96,7 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 
 # Display
+debug.hwui.use_buffer_age=false
 debug.sf.enable_hwc_vds=1
 debug.sf.enable_gl_backpressure=1
 debug.hwui.renderer=skiagl
