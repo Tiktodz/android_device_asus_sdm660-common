@@ -96,6 +96,7 @@ debug.stagefright.omx_default_rank=0
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
+debug.sf.recomputecrop=0
 persist.hwc.mdpcomp.enable=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=sdm660
