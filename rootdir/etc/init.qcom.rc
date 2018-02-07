@@ -413,7 +413,7 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     user system
     group system radio
 
-service charger /system/bin/charger
+service vendor.charger /system/bin/chargeonlymode
     class charger
     user system
     group system graphics input
