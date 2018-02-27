@@ -90,6 +90,9 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
