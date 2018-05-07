@@ -76,8 +76,13 @@ TARGET_HW_DISK_ENCRYPTION := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
-# HWUI
-HWUI_COMPILE_FOR_PERF := true
+# Enable dexpreopt to speed boot time
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT := true
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # FM
 BOARD_HAS_QCA_FM_SOC := cherokee
@@ -112,6 +117,9 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS += NFC
 ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
+
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sdm660
