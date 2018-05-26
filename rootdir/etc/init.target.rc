@@ -152,6 +152,8 @@ service thermal-engine /system/vendor/bin/thermal-engine
 
 on property:sys.boot_completed=1
    start thermal-engine
+   # Enable PowerHAL hint processing
+   setprop vendor.powerhal.init 1
 
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
      class core
