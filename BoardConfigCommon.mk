@@ -37,6 +37,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Build System
+BUILD_BROKEN_DUP_RULES := true
+
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
