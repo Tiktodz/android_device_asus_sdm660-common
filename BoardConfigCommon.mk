@@ -47,6 +47,9 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Build System
+BUILD_BROKEN_DUP_RULES := true
+
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
