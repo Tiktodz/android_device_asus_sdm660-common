@@ -147,6 +147,9 @@ persist.backup.ntpServer=0.pool.ntp.org
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Radio
 persist.radio.multisim.config=dsds
 persist.radio.aosp_usr_pref_sel=true
