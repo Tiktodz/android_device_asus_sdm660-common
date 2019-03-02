@@ -285,4 +285,6 @@
          will not debounce light sensor readings -->
     <integer name="config_lightSensorWarmupTime">200</integer>
 
+    <!-- reference volume index for music stream to limit headphone volume and display warning -->
+    <integer name="config_safe_media_volume_index">15</integer>
 </resources>
