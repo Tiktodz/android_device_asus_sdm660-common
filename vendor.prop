@@ -97,6 +97,8 @@ debug.stagefright.omx_default_rank=0
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
 persist.hwc.mdpcomp.enable=true
+ro.hardware.egl=adreno
+ro.hardware.vulkan=sdm660
 ro.opengles.version=196610
 vendor.display.disable_rotator_downscale=1
 
