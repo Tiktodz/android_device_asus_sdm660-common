@@ -494,3 +494,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# ZenParts
+PRODUCT_PACKAGES += \
+    init.spectrum.rc \
+    init.spectrum.sh \
+    init.zenparts.rc \
+    init.zenparts.sh \
+    ZenParts
