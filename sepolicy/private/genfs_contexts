@@ -3,3 +3,6 @@ genfscon sysfs /kernel/sound_control/headphone_gain                             
 
 # Microphone Gain
 genfscon sysfs /kernel/sound_control/mic_gain                                            u:object_r:sysfs_mgain:s0
+
+# USB Fastcharge
+genfscon sysfs /kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0

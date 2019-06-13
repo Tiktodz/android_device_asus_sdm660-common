@@ -28,6 +28,10 @@ on boot
   chmod 0660 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness
   chmod 0660 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness
 
+# USB fastcharge permissions
+  chown system system /sys/kernel/fast_charge/force_fast_charge
+  chmod 0660 /sys/kernel/fast_charge/force_fast_charge
+
 # Vibrator permissions
   chown root system /sys/class/timed_output/vibrator/vtg_level
   chmod 0660 /sys/class/timed_output/vibrator/vtg_level

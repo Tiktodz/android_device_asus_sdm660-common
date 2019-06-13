@@ -20,6 +20,9 @@ allow system_app spectrum_prop:property_service set;
 allow system_app sysfs_tbrightness:file { open getattr write };
 allow system_app sysfs_leds:dir search;
 
+# USB Fastcharge
+allow system_app sysfs_fcharge:file { open read getattr write };
+
 # Vibrator
 allow system_app sysfs_vibrator:file { getattr open read write };
 allow system_app sysfs_vibrator:dir search;

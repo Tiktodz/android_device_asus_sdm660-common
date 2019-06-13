@@ -32,36 +32,39 @@ import com.asus.zenparts.preferences.VibrationSeekBarPreference;
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-
     final static String PREF_TORCH_BRIGHTNESS = "torch_brightness";
-    private final static String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
+    public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
-    private final static String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
+    public static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
 
-    final static String PREF_VIBRATION_STRENGTH = "vibration_strength";
-    private final static String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
+    public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
+    public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
 
     // value of vtg_min and vtg_max
-    final static int MIN_VIBRATION = 116;
-    final static int MAX_VIBRATION = 3596;
+    public static final int MIN_VIBRATION = 116;
+    public static final int MAX_VIBRATION = 3596;
 
-    private static final String PREF_ENABLE_HAL3 = "hal3";
-    private static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
+    public static final String PREF_ENABLE_HAL3 = "hal3";
+    public static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
 
-    private static final String CATEGORY_DISPLAY = "display";
-    private static final String PREF_DEVICE_KCAL = "device_kcal";
+    public static final String CATEGORY_DISPLAY = "display";
+    public static final String PREF_DEVICE_KCAL = "device_kcal";
 
-    private static final String PREF_SPECTRUM = "spectrum";
-    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+    public static final String PREF_SPECTRUM = "spectrum";
+    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
-    private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
-    private static final String PREF_HEADSET = "dirac_headset_pref";
-    private static final String PREF_PRESET = "dirac_preset_pref";
-    final static String PREF_HEADPHONE_GAIN = "headphone_gain";
-    private static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
-    final static String PREF_MICROPHONE_GAIN = "microphone_gain";
-    private static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+    public static final String PREF_ENABLE_DIRAC = "dirac_enabled";
+    public static final String PREF_HEADSET = "dirac_headset_pref";
+    public static final String PREF_PRESET = "dirac_preset_pref";
+    public static final String PREF_HEADPHONE_GAIN = "headphone_gain";
+    public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
+    public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
+    public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+
+    public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
+    public static final String PREF_USB_FASTCHARGE = "fastcharge";
+    public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 
     private SecureSettingSwitchPreference mEnableHAL3;
     private SecureSettingCustomSeekBarPreference mTorchBrightness;
@@ -73,6 +76,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mPreset;
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
     private SecureSettingCustomSeekBarPreference mMicrophoneGain;
+    private SecureSettingSwitchPreference mFastcharge;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -131,6 +135,14 @@ public class DeviceSettings extends PreferenceFragment implements
 
         mMicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
+
+        if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
+            mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
+            mFastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
+            mFastcharge.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
+        }
     }
 
     @Override
@@ -190,6 +202,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_MICROPHONE_GAIN:
                 FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
+                break;
+
+            case PREF_USB_FASTCHARGE:
+                FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
 
             default:
