@@ -10,6 +10,9 @@
 # Firmware
 /firmware                                                                     u:object_r:firmware_file:s0
 
+# Gestures
+/sys/kernel/touchpanel/dclicknode                                       u:object_r:sysfs:s0
+
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
 # (e.g. Google Camera App)
