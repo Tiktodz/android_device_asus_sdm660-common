@@ -97,7 +97,11 @@ on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
     write /sys/module/usb_f_qcrndis/parameters/rndis_dl_max_xfer_size 15916
 
-#Peripheral manager
+# Smart Charging
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
+# Peripheral manager
 service vendor.per_mgr /system/vendor/bin/pm-service
     class core
     user system
