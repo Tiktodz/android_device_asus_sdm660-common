@@ -17,6 +17,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# AR CONFIG
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/android.hardware.camera.ar.xml:vendor/etc/permissions/android.hardware.camera.ar.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
