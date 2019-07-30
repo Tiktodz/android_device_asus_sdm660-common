@@ -13,7 +13,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="advanced_settings">ZenParts</string>
     <string name="advanced_settings_summary">Device specific tweaks</string>
 
@@ -141,8 +142,10 @@
     <string name="kcal_presets" translatable="false">@string/presets_dialog_title</string>
     <string name="kcal_reset">Reset</string>
 
-    <!-- CustomSeekBarPreference -->
-    <string name="edit_value">Choose new value</string>
-    <string name="default_value">Default value</string>
-    <string name="edit_hint">Value between %1$d and %2$d</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
 </resources>

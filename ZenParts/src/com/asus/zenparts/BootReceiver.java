@@ -20,6 +20,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
+import com.asus.zenparts.preferences.VibratorStrengthPreference;
 
 import com.asus.zenparts.kcal.Utils;
 
@@ -55,6 +56,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
+        VibratorStrengthPreference.restore(context);
         }
 
         FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,
@@ -63,8 +65,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
                         DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
-        FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
-                context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
         FileUtils.setValue(DeviceSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
