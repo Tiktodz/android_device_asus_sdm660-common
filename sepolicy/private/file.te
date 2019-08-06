@@ -1,3 +1,6 @@
+# Backlight Dimmer
+type sysfs_backlight, sysfs_type, fs_type;
+
 # Headphone Gain
 type sysfs_hgain, sysfs_type, fs_type;
 

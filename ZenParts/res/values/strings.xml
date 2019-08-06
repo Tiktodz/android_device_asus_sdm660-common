@@ -26,6 +26,10 @@
     <string name="device_kcal_title">Display color calibration</string>
     <string name="kcal_enabled_summary">Calibrate display using KCAL</string>
 
+    <!-- Backlight Dimmer -->
+    <string name="backlight_dimmer">Backlight dimmer</string>
+    <string name="backlight_summary">Dim the display to the maximum value</string>
+
     <!-- Torch -->
     <string name="torch_title">Torch</string>
     <string name="torch_brightness_title">Brightness</string>

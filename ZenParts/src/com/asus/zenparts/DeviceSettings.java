@@ -45,6 +45,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
 
+    public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
+    public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
+
     public static final String PREF_ENABLE_HAL3 = "hal3";
     public static final String HAL3_SYSTEM_PROPERTY = "persist.camera.HAL3.enabled";
 
@@ -77,6 +80,8 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
     private SecureSettingCustomSeekBarPreference mMicrophoneGain;
     private SecureSettingSwitchPreference mFastcharge;
+
+    private SecureSettingSwitchPreference mBacklightDimmer;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -111,6 +116,14 @@ public class DeviceSettings extends PreferenceFragment implements
         mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
         mSPECTRUM.setSummary(mSPECTRUM.getEntry());
         mSPECTRUM.setOnPreferenceChangeListener(this);
+
+        if (FileUtils.fileWritable(BACKLIGHT_DIMMER_PATH)) {
+            mBacklightDimmer = (SecureSettingSwitchPreference) findPreference(PREF_BACKLIGHT_DIMMER);
+            mBacklightDimmer.setChecked(FileUtils.getFileValueAsBoolean(BACKLIGHT_DIMMER_PATH, false));
+            mBacklightDimmer.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(PREF_BACKLIGHT_DIMMER));
+        }
 
         boolean enhancerEnabled;
         try {
@@ -206,6 +219,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
+                break;
+
+            case PREF_BACKLIGHT_DIMMER:
+                FileUtils.setValue(BACKLIGHT_DIMMER_PATH, (boolean) value);
                 break;
 
             default:
