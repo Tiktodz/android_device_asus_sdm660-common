@@ -188,6 +188,14 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
+# Rendering
+debug.enable.sglscale=1
+debug.egl.hw=1
+debug.sf.disable_hwc=0
+debug.sf.recomputecrop=0
+persist.hwc.ptor.enable=true
+debug.sf.gpu_comp_tiling=1
+
 # Sensors
 ro.vendor.sdk.sensors.gestures=false
 ro.vendor.sensors.cmc=false
