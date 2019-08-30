@@ -85,5 +85,16 @@
             android:name=".DiracService"
             android:enabled="true"
             android:stopWithTask="false" />
+
+        <service
+            android:name=".ZenpartsTile"
+            android:enabled="true"
+            android:icon="@drawable/qs_asus"
+            android:label="@string/advanced_settings"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest>
