@@ -91,6 +91,8 @@ LOCAL_CFLAGS += -DUSE_HAL_3_3
 endif
 endif
 
+LOCAL_CFLAGS += -Wno-unused-variable -Wno-unused-parameter -DVANILLA_HAL
+
 #use media extension
 ifeq ($(TARGET_USES_MEDIA_EXTENSIONS), true)
 LOCAL_CFLAGS += -DUSE_MEDIA_EXTENSIONS
