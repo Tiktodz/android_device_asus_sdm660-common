@@ -73,3 +73,6 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+
+# Sepolicy
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
