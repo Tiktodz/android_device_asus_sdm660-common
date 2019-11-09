@@ -2333,7 +2333,15 @@
     <path name="unprocessed-handset-mic">
         <path name="handset-mic" />
     </path>
+    
+    <path name="unprocessed-quad-mic">
+        <path name="quad-mic" />
+    </path>
 
+    <path name="unprocessed-headset-mic">
+        <path name="headset-mic" />
+    </path>
+    
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
     </path>
