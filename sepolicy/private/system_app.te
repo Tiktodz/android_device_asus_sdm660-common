@@ -1,6 +1,9 @@
 # Backlight Dimmer
 allow system_app sysfs_backlight:file { open read getattr write };
 
+# Earpiece Gain
+allow system_app sysfs_egain:file { open read getattr write };
+
 # Headphone Gain
 allow system_app sysfs_hgain:file { open read getattr write };
 

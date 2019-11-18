@@ -114,7 +114,7 @@
             android:icon="@drawable/ic_preset"
             android:title="@string/dirac_preset_title" />
 
-        <com.asus.zenparts.preferences.CustomSeekBarPreference
+        <com.asus.zenparts.preferences.SecureSettingCustomSeekBarPreference
             android:defaultValue="2"
             android:key="headphone_gain"
             android:max="20"
@@ -129,6 +129,14 @@
             app:min="-10"
             android:icon="@drawable/ic_mic"
             android:title="@string/microphone_gain" />
+
+        <com.asus.zenparts.preferences.SecureSettingCustomSeekBarPreference
+            android:defaultValue="0"
+            android:key="earpiece_gain"
+            android:max="20"
+            app:min="-10"
+            android:icon="@drawable/ic_earpiece"
+            android:title="@string/earpiece_gain" />
 
     </PreferenceCategory>
 
