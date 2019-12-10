@@ -7,3 +7,6 @@ allow hal_camera_default vendor_sensors_dbg_prop:file { getattr  open  read };
 set_prop(hal_camera_default, vendor_camera_prop)
 set_prop(hal_camera_default, vendor_video_prop)
 get_prop(hal_camera_default, vendor_sensors_dbg_prop)
+
+# Allow hal_camera_default to search in mnt/vendor
+allow hal_camera_default mnt_vendor_file:dir search;
