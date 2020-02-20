@@ -385,6 +385,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # QMI
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect.vendor \
