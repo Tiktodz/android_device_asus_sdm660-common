@@ -130,6 +130,20 @@
     <string name="preset_extreme_amoled">Extreme amoled</string>
     <string name="preset_warm_amoled">Warm amoled</string>
     <string name="preset_hybrid_mamba">Hybrid mamba</string>
+    <string name="preset_sir_banger">Sir Banger</string>
+    <string name="preset_gerard_extrem_cool">Gerard extreme cool</string>
+    <string name="preset_yoyoz808">Yoyoz808</string>
+    <string name="preset_purian">Purian</string>
+    <string name="preset_deep_black_colorful">Deep black colorful</string>
+    <string name="preset_vomer_deep_rich">Vomer deep rich</string>
+    <string name="preset_franco">Franco</string>
+    <string name="preset_wrinklefree_cool">Wrinklefree cool</string>
+    <string name="preset_harley_tech">Harley-tech</string>
+    <string name="preset_perfection">Perfection</string>
+    <string name="preset_banged_up">Banged up</string>
+    <string name="preset_sim_cooler">Simcooler</string>
+    <string name="preset_obsanity">Obsanity</string>
+    <string name="preset_obsanity_ips">Obsanity IPS</string>
 
     <!-- USB fastcharge -->
     <string name="usb_fastcharge_title">USB fastcharge</string>
