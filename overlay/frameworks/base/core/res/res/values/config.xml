@@ -339,4 +339,14 @@
     <string name="config_gpu_clock_path">/sys/kernel/gpu/gpu_clock</string>
     <string name="config_gpu_busy_path">/sys/kernel/gpu/gpu_busy</string>
 
+    <!-- Paths to the libraries that contain device specific key handlers -->
+        <string-array name="config_deviceKeyHandlerLibs" translatable="false">
+        <item>/system/priv-app/ZenParts/ZenParts.apk</item>
+    </string-array>
+
+    <!-- Names of the key handler classes -->
+    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
+        <item>com.asus.zenparts.TouchKeyHandler</item>
+    </string-array>
+
 </resources>

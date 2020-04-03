@@ -25,6 +25,8 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <protected-broadcast android:name="com.asus.zenparts.UPDATE_SETTINGS" />
+
     <uses-sdk android:minSdkVersion="27" />
 
     <application
@@ -106,5 +108,11 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".TouchscreenGestureSettings"
+            android:label="@string/touchscreen_gesture_settings_title"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 </manifest>
