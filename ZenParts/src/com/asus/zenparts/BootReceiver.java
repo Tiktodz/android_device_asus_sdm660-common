@@ -25,6 +25,7 @@ import android.provider.Settings;
 import com.asus.zenparts.preferences.VibratorStrengthPreference;
 
 import com.asus.zenparts.kcal.Utils;
+import com.asus.zenparts.ambient.SensorsDozeService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
@@ -77,7 +78,11 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                 DeviceSettings.PREF_EARPIECE_GAIN, 0));
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
+        // Dirac
         context.startService(new Intent(context, DiracService.class));
+
+       // Ambient
+        context.startService(new Intent(context, SensorsDozeService.class));
 
         boolean enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
         if (enabled) {

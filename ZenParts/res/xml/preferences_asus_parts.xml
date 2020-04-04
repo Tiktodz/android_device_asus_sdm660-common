@@ -104,6 +104,13 @@
                     android:targetClass="com.asus.zenparts.TouchscreenGestureSettings" />
         </Preference>
 
+        <PreferenceScreen
+            android:key="ambient_display_gestures"
+            android:fragment="com.asus.zenparts.ambient.AmbientGesturePreferenceActivity"
+            android:summary="@string/ambient_display_gestures_summary"
+            android:icon="@drawable/ic_doze"
+            android:title="@string/ambient_display_gestures_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

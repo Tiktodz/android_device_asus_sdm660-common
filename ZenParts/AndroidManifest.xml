@@ -29,6 +29,9 @@
 
     <uses-sdk android:minSdkVersion="27" />
 
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+    <protected-broadcast android:name="com.asus.zenparts.CUST_UPDATE" />
+
     <application
         android:label="@string/advanced_settings"
         android:supportsRtl="true"
@@ -81,6 +84,19 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.asus.zenparts.ambient.SensorsDozeService"
+                 android:permission="SensorsDozeService">
+        </service>
+
+        <activity
+            android:name="com.asus.zenparts.ambient.AmbientGesturePreferenceActivity"
+            android:label="@string/ambient_display_gestures_title">
+            android:icon="@drawable/ic_doze"
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
         </activity>
 
