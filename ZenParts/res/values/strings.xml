@@ -198,4 +198,9 @@
     <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
     <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
     <string name="touchscreen_gesture_action_wake_device">Wake device</string>
+
+    <!-- Log Tile -->
+    <string name="quick_settings_log_tile_label">Logs</string>
+    <string name="quick_settings_log_tile_dialog_title">Options</string>
+    <string name="cannot_get_su">Action failed because of missing superuser access</string>
 </resources>
