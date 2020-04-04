@@ -203,4 +203,9 @@
     <string name="quick_settings_log_tile_label">Logs</string>
     <string name="quick_settings_log_tile_dialog_title">Options</string>
     <string name="cannot_get_su">Action failed because of missing superuser access</string>
+
+    <!-- FPS Info -->
+    <string name="fps_info_title">FPS info overlay</string>
+    <string name="fps_info_summary">Show overlay with current frames per second</string>
+
 </resources>
