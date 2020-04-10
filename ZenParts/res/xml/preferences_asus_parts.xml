@@ -139,17 +139,6 @@
     <PreferenceCategory
             android:title="@string/touch_gestures">
 
-        <Preference
-            android:key="touchscreen_gesture_category"
-            android:icon="@drawable/ic_gestures"
-            android:title="@string/touchscreen_gesture_settings_title"
-            android:summary="@string/touchscreen_gesture_settings_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.asus.zenparts"
-                    android:targetClass="com.asus.zenparts.TouchscreenGestureSettings" />
-        </Preference>
-
         <PreferenceScreen
             android:key="ambient_display_gestures"
             android:fragment="com.asus.zenparts.ambient.AmbientGesturePreferenceActivity"
