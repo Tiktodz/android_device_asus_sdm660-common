@@ -69,6 +69,9 @@ persist.backup.ntpServer="0.pool.ntp.org"
 ro.vendor.qti.sys.fw.bg_apps_limit=38
 vendor.perf.gestureflingboost.enable=true
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
