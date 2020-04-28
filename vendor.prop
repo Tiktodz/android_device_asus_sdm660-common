@@ -148,6 +148,7 @@ persist.backup.ntpServer=0.pool.ntp.org
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf.scroll_opt=true
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
