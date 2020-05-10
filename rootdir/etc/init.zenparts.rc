@@ -4,9 +4,11 @@ on boot
   chown system system /sys/kernel/sound_control/earpiece_gain
   chown system system /sys/kernel/sound_control/headphone_gain
   chown system system /sys/kernel/sound_control/mic_gain
+  chown system system /sys/kernel/sound_control/speaker_gain
   chmod 0660 /sys/kernel/sound_control/earpiece_gain
   chmod 0660 /sys/kernel/sound_control/headphone_gain
   chmod 0660 /sys/kernel/sound_control/mic_gain
+  chmod 0660 /sys/kernel/sound_control/speaker_gain
 
 # Backlight Dimmer
   chown system system /sys/module/mdss_fb/parameters/backlight_dimmer

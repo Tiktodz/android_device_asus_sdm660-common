@@ -13,6 +13,9 @@ type kcal_dev, sysfs_type, fs_type;
 # Microphone Gain
 type sysfs_mgain, sysfs_type, fs_type;
 
+# Speaker Gain
+type sysfs_sgain, sysfs_type, fs_type;
+
 # Torch Brightness Control
 type sysfs_tbrightness, sysfs_type, fs_type;
 
