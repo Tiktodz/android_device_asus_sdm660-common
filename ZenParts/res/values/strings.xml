@@ -252,4 +252,22 @@
     <!-- Label for feature switch -->
     <string name="switch_bar_off">Off</string>
 
+    <!-- Boosts -->
+    <string name="boost_title">Boost</string>
+    <string name="gpuboost_title">GPU boost</string>
+    <string name="cpuboost_title">CPU boost</string>
+    <string name="gpuboost_dialogTitle">Select your GPU boost level</string>
+    <string name="cpuboost_dialogTitle">Select your CPU boost level</string>
+
+    <!-- GPU/CPU Boost Presets -->
+    <string name="gpuboost_high">High</string>
+    <string name="gpuboost_medium">Medium</string>
+    <string name="gpuboost_low">Low</string>
+    <string name="gpuboost_disable">Disable</string>
+
+    <string name="cpuboost_high">High</string>
+    <string name="cpuboost_medium">Medium</string>
+    <string name="cpuboost_low">Low</string>
+    <string name="cpuboost_disable">Disable</string>
+
 </resources>

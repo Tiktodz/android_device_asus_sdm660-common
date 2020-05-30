@@ -1,5 +1,8 @@
 # Dirac
 type dirac_prop, property_type;
 
+# GPU/CPU Boosts
+type boosts_prop, property_type;
+
 # Spectrum
 type spectrum_prop, property_type;

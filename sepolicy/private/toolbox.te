@@ -1,2 +1,7 @@
+# GPU/CPU Boosts
+allow toolbox init:fifo_file { getattr write };
+allow toolbox boosts_prop:property_service { set };
+allow toolbox boosts_prop:file { getattr  open  read };
+
 # Spectrum
 allow toolbox spectrum_prop:property_service { set };

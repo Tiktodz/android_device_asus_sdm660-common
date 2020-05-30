@@ -1,2 +1,9 @@
+# GPU/CPU Boosts
+allow init sysfs_kgsl:lnk_file { read };
+allow init sysfs_kgsl:file { write open };
+
+# SELinux
+allow init vendor_file:file { execute execute_no_trans };
+
 # USB Fastcharge
 allow init sysfs_fcharge:file { write open };

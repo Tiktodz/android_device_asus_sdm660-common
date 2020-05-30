@@ -1,2 +1,5 @@
+# GPU/CPU Boosts
+allow platform_app sysfs_kgsl:dir { search };
+
 # Torch
 allow platform_app sysfs_leds:dir search;
