@@ -27,10 +27,6 @@ on boot
     chmod 0644 /sys/module/cpu_boost/parameters/input_boost_freq
     chmod 0644 /sys/module/cpu_boost/parameters/input_boost_ms
 
-    # Enable {cpu, gpu}boost support
-    setprop gpuboost.support 1
-    setprop cpuboost.support 1
-
     # Run zenparts script to initialize boost props
     exec u:r:init:s0 root root -- /vendor/bin/init.zenparts.sh
     exec u:r:su:s0 root root -- /vendor/bin/init.zenparts.sh
@@ -41,7 +37,7 @@ on property:persist.zenparts.gpu_profile=0
     write /sys/module/adreno_idler/parameters/adreno_idler_active "Y"
     write /sys/module/adreno_idler/parameters/adreno_idler_idleworkload "10000"
     write /sys/module/adreno_idler/parameters/adreno_idler_downdifferential "35"
-    write /sys/module/adreno_idler/parameters/adreno_idler_idlewait "25"
+    write /sys/module/adreno_idler/parameters/adreno_idler_idlewait "15"
 
 # GPU-Low
 on property:persist.zenparts.gpu_profile=1
@@ -57,7 +53,7 @@ on property:persist.zenparts.gpu_profile=2
     write /sys/module/adreno_idler/parameters/adreno_idler_active "Y"
     write /sys/module/adreno_idler/parameters/adreno_idler_idleworkload "5000"
     write /sys/module/adreno_idler/parameters/adreno_idler_downdifferential "15"
-    write /sys/module/adreno_idler/parameters/adreno_idler_idlewait "15"
+    write /sys/module/adreno_idler/parameters/adreno_idler_idlewait "40"
 
 # GPU-High
 on property:persist.zenparts.gpu_profile=3
@@ -83,8 +79,14 @@ on property:persist.zenparts.cpu_profile=2
 # CPU-High
 on property:persist.zenparts.cpu_profile=3
     write /sys/module/cpu_boost/parameters/input_boost_enabled 1
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1958400 1:1958400 2:1958400 3:1958400 4:2208000 5:2208000 6:2208000 7:2208000"
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1747200 1:1747200 2:1747200 3:1747200 4:1958400 5:1958400 6:1958400 7:1958400"
     write /sys/module/cpu_boost/parameters/input_boost_ms 1000
+
+# CPU-Extreme
+on property:persist.zenparts.cpu_profile=4
+    write /sys/module/cpu_boost/parameters/input_boost_enabled 1
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:2150400 1:2150400 2:2150400 3:2150400 4:2208000 5:2208000 6:2208000 7:2208000"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 3000
 
 # FPS Info
   chown system graphics /sys/class/graphics/fb0/measured_fps

@@ -265,6 +265,7 @@
     <string name="gpuboost_low">Low</string>
     <string name="gpuboost_disable">Disable</string>
 
+    <string name="cpuboost_extreme">Extreme</string>
     <string name="cpuboost_high">High</string>
     <string name="cpuboost_medium">Medium</string>
     <string name="cpuboost_low">Low</string>

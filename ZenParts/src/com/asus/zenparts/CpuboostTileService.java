@@ -22,7 +22,7 @@ public class CpuboostTileService extends TileService {
         int currentState = FileUtils.getintProp(DeviceSettings.CPUBOOST_SYSTEM_PROPERTY, 0);
 
         int nextState;
-        if (currentState == 3) {
+        if (currentState == 4) {
             nextState = 0;
         } else {
             nextState = currentState + 1;

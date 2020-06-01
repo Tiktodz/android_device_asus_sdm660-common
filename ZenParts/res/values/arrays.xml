@@ -219,11 +219,13 @@
         <item>@string/cpuboost_low</item>
         <item>@string/cpuboost_medium</item>
         <item>@string/cpuboost_high</item>
+        <item>@string/cpuboost_extreme</item>
     </string-array>
     <string-array name="cpuboost_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
     </string-array>
 </resources>
