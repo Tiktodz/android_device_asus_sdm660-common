@@ -63,6 +63,8 @@ on property:persist.zenparts.gpu_profile=3
 # CPU-Disable (default profile)
 on property:persist.zenparts.cpu_profile=0
     write /sys/module/cpu_boost/parameters/input_boost_enabled 0
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 0
 
 # CPU-Low
 on property:persist.zenparts.cpu_profile=1
