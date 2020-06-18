@@ -271,4 +271,8 @@
     <string name="cpuboost_low">Low</string>
     <string name="cpuboost_disable">Disable</string>
 
+    <!-- Touchboost -->
+    <string name="touchboost_title">Enable/Disable touchboost</string>
+    <string name="touchboost_summary">Boosts CPU when touch detected for smooth experience</string>
+
 </resources>
