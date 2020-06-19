@@ -27,6 +27,8 @@ import com.asus.zenparts.preferences.VibratorStrengthPreference;
 import com.asus.zenparts.kcal.Utils;
 import com.asus.zenparts.ambient.SensorsDozeService;
 
+import java.lang.Math.*;
+
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
     public void onReceive(Context context, Intent intent) {
@@ -69,15 +71,15 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
                         DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
-        FileUtils.setValue(DeviceSettings.NOTIF_LED_BLUE_PATH,
+        FileUtils.setValue(DeviceSettings.NOTIF_LED_BLUE_PATH,(1 + Math.pow(1.05694,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
-        FileUtils.setValue(DeviceSettings.NOTIF_LED_RED_PATH,
+                        DeviceSettings.PREF_NOTIF_LED, 100))));
+        FileUtils.setValue(DeviceSettings.NOTIF_LED_RED_PATH,(1 + Math.pow(1.05694,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
-        FileUtils.setValue(DeviceSettings.NOTIF_LED_GREEN_PATH,
+                        DeviceSettings.PREF_NOTIF_LED, 100))));
+        FileUtils.setValue(DeviceSettings.NOTIF_LED_GREEN_PATH,(1 + Math.pow(1.05694,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
+                        DeviceSettings.PREF_NOTIF_LED, 100))));
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
         FileUtils.setValue(DeviceSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
