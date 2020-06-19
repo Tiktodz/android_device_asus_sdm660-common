@@ -19,6 +19,10 @@ allow system_app kcal_dev:dir search;
 # Microphone Gain
 allow system_app sysfs_mgain:file { open read getattr write };
 
+# Notification LED
+allow system_app sysfs_graphics:dir search;
+allow system_app sysfs_graphics:file rw_file_perms;
+
 # Speaker Gain
 allow system_app sysfs_sgain:file { open read getattr write };
 

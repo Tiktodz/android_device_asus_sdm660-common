@@ -31,6 +31,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="notification_led"
+        android:title="@string/notification_title">
+
+        <com.asus.zenparts.preferences.NotificationLedSeekBarPreference
+            android:key="notification_led_brightness"
+            android:title="@string/notification_led_title"
+            android:icon="@drawable/ic_led"
+            android:max="255"
+            app:min="1"
+            android:defaultValue="64" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="vibration"
         android:title="@string/vibration_title">
 

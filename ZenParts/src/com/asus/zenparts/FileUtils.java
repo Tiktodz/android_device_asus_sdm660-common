@@ -24,7 +24,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
-class FileUtils {
+public class FileUtils {
 
     static boolean fileWritable(String filename) {
         return fileExists(filename) && new File(filename).canWrite();
@@ -37,7 +37,7 @@ class FileUtils {
         return new File(filename).exists();
     }
 
-    static void setValue(String path, int value) {
+    public static void setValue(String path, int value) {
         if (fileWritable(path)) {
             if (path == null) {
                 return;
