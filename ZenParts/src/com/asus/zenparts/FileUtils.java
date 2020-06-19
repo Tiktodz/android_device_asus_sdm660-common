@@ -132,6 +132,14 @@ public class FileUtils {
         return defValue;
     }
 
+    static boolean getFilesValueAsBoolean(String filename, boolean defValue) {
+        String fileValue = readLine(filename);
+        if (fileValue != null) {
+            return !fileValue.equals("N");
+        }
+        return defValue;
+    }
+
     static void setProp(String prop, boolean value) {
         if (value) {
             SystemProperties.set(prop, "1");
