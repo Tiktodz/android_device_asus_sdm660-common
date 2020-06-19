@@ -71,13 +71,13 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                         DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
         FileUtils.setValue(DeviceSettings.NOTIF_LED_BLUE_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PREF_NOTIF_LED, 255));
+                        DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
         FileUtils.setValue(DeviceSettings.NOTIF_LED_RED_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PREF_NOTIF_LED, 255));
+                        DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
         FileUtils.setValue(DeviceSettings.NOTIF_LED_GREEN_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        DeviceSettings.PREF_NOTIF_LED, 255));
+                        DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
         FileUtils.setValue(DeviceSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
