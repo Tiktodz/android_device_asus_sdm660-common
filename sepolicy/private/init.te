@@ -3,7 +3,9 @@ allow init sysfs_kgsl:lnk_file { read };
 allow init sysfs_kgsl:file { write open };
 
 # SELinux
-allow init vendor_file:file { execute execute_no_trans };
+allow init su:process { noatsecure  rlimitinh  siginh  transition };
 
 # USB Fastcharge
 allow init sysfs_fcharge:file { write open };
+
+allow init vendor_file:file { execute execute_no_trans };

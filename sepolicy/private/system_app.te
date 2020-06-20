@@ -23,6 +23,9 @@ allow system_app sysfs_mgain:file { open read getattr write };
 allow system_app sysfs_graphics:dir search;
 allow system_app sysfs_graphics:file rw_file_perms;
 
+# SELinux
+allow system_app selinuxfs:file { read open };
+
 # Speaker Gain
 allow system_app sysfs_sgain:file { open read getattr write };
 
