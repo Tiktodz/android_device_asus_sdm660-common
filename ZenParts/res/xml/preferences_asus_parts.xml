@@ -225,6 +225,22 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="speaker"
+        android:title="@string/speaker_category">
+
+        <Preference
+            android:key="clear_speaker_settings"
+            android:title="@string/clear_speaker_title"
+            android:icon="@drawable/ic_speaker_cleaner_icon" >
+         <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.asus.zenparts.speaker.ClearSpeakerActivity"
+                android:targetPackage="com.asus.zenparts.speaker" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="usb_fastcharge"
         android:title="@string/usb_fastcharge_title" >
 
