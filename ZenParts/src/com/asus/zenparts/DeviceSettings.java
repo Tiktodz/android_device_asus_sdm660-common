@@ -89,7 +89,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_CPUBOOST = "cpuboost";
     public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.zenparts.cpu_profile";
 
-    public static final String CATEGORY_TOUCHBOOST = "msm_touchboost";
     public static final String PREF_MSM_TOUCHBOOST = "touchboost";
     public static final String MSM_TOUCHBOOST_PATH = "/sys/module/msm_performance/parameters/touchboost";
 
@@ -213,7 +212,7 @@ public class DeviceSettings extends PreferenceFragment implements
             mTouchboost.setChecked(Touchboost.isCurrentlyEnabled(this.getContext()));
             mTouchboost.setOnPreferenceChangeListener(new Touchboost(getContext()));
         } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_TOUCHBOOST));
+            getPreferenceScreen().removePreference(findPreference(PREF_MSM_TOUCHBOOST));
         }
 
         boolean enhancerEnabled;
