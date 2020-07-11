@@ -109,6 +109,9 @@ drm.service.enabled=true
 vendor.hw.fm.init=0
 vendor.fm.a2dp.conc.disabled=false
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
