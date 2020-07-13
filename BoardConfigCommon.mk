@@ -6,8 +6,6 @@
 
 COMMON_PATH := device/asus/sdm660-common
 
-BOARD_VENDOR := asus
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
