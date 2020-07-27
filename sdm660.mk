@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit the proprietary files
+$(call inherit-product, vendor/asus/sdm660-common/sdm660-common-vendor.mk)
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
