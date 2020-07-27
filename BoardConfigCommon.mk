@@ -82,3 +82,6 @@ include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-04-05
+
+# Inherit the proprietary files
+include vendor/asus/sdm660-common/BoardConfigVendor.mk
