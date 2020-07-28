@@ -93,6 +93,8 @@ BOARD_USES_QCOM_HARDWARE := true
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
 # Treble
 BOARD_VNDK_VERSION := current
 
