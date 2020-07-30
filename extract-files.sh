@@ -49,6 +49,17 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+
+    # remove android.hidl.base dependency
+    lib64/libfm-hci.so | lib64/libwfdnative.so | lib/libfm-hci.so | lib/libwfdnative.so)
+        patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
+
+    esac
+}
+
 # Initialize the helper for common device
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
