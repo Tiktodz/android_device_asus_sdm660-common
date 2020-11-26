@@ -165,7 +165,7 @@ BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 BOARD_VNDK_VERSION := current
 
 # Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2020-04-05
+VENDOR_SECURITY_PATCH := 2020-09-05
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
