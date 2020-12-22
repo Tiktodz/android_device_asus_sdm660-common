@@ -1,4 +1,4 @@
-# Common proprietary files - from UL-ASUS_X01BD-WW-17.2018.2004.424-user build, unless pinned
+# Common proprietary files - from UL-ASUS_X01BD-WW-17.2018.2012.434-user build, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
