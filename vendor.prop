@@ -97,6 +97,7 @@ persist.vendor.camera.isp.dualisp=1
 persist.vendor.camera.mpo.disabled=1
 persist.vendor.camera.preview.ubwc=0
 persist.vendor.camera.HAL3.enabled=1
+camera.disable_zsl_mode=1
 
 # Codec2 switch
 debug.stagefright.omx_default_rank.sw-audio=1
