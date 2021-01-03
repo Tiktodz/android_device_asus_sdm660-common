@@ -100,6 +100,7 @@ persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
+camera.disable_zsl_mode=1
 persist.vendor.camera.eis.enable=1
 persist.vendor.camera.expose.aux=1
 persist.vendor.camera.is_type=4
