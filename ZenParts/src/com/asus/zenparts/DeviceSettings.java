@@ -26,6 +26,7 @@ import android.os.Handler;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
+import androidx.preference.TwoStatePreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import android.content.Context;
@@ -40,11 +41,14 @@ import com.asus.zenparts.preferences.SecureSettingListPreference;
 import com.asus.zenparts.preferences.SecureSettingSwitchPreference;
 import com.asus.zenparts.preferences.VibratorStrengthPreference;
 import com.asus.zenparts.preferences.NotificationLedSeekBarPreference;
+import com.asus.zenparts.preferences.SeekBarPreference;
 
 import com.asus.zenparts.SuShell;
 import com.asus.zenparts.SuTask;
 
 import java.lang.Math.*;
+
+import com.asus.zenparts.ModeSwitch.SmartChargingSwitch;
 
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -107,6 +111,9 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
 
+    public static final String KEY_CHARGING_SWITCH = "smart_charging";
+    public static final String KEY_RESET_STATS = "reset_stats";
+
     private CustomSeekBarPreference mTorchBrightness;
     private VibratorStrengthPreference mVibratorStrength;
     private NotificationLedSeekBarPreference mLEDBrightness;
@@ -128,6 +135,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mTouchboost;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
+    private static TwoStatePreference mSmartChargingSwitch;
+    public static TwoStatePreference mResetStats;
+    public static SeekBarPreference mSeekBarPreference;
 
     private static Context mContext;
 
@@ -276,6 +286,18 @@ public class DeviceSettings extends PreferenceFragment implements
         mSelinuxPersistence.setChecked(getContext()
         .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
         .contains(PREF_SELINUX_MODE));
+
+        mSmartChargingSwitch = (TwoStatePreference) findPreference(KEY_CHARGING_SWITCH);
+        mSmartChargingSwitch.setChecked(prefs.getBoolean(KEY_CHARGING_SWITCH, false));
+        mSmartChargingSwitch.setOnPreferenceChangeListener(new SmartChargingSwitch(getContext()));
+
+        mResetStats = (TwoStatePreference) findPreference(KEY_RESET_STATS);
+        mResetStats.setChecked(prefs.getBoolean(KEY_RESET_STATS, false));
+        mResetStats.setEnabled(mSmartChargingSwitch.isChecked());
+        mResetStats.setOnPreferenceChangeListener(this);
+
+        mSeekBarPreference = (SeekBarPreference) findPreference("seek_bar");
+        mSeekBarPreference.setEnabled(mSmartChargingSwitch.isChecked());
     }
 
     @Override

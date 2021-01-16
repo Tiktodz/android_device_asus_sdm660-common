@@ -26,6 +26,9 @@ allow system_app sysfs_graphics:file rw_file_perms;
 # SELinux
 allow system_app selinuxfs:file { read open };
 
+# Smart Charging
+allow system_app sysfs_scharge:file { getattr open write };
+
 # Speaker Gain
 allow system_app sysfs_sgain:file { open read getattr write };
 
