@@ -165,6 +165,11 @@
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
     </string-array>
 
+     <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image -->
+     <string-array translatable="false" name="config_jitzygoteBootImagePinnerServiceFiles">
+         <item>"/system/bin/surfaceflinger"</item>
+     </string-array>   
+
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">false</bool>
 
