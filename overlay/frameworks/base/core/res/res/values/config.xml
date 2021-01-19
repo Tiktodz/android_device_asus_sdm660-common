@@ -156,7 +156,7 @@
         <item>"/system/lib64/libRSDriver.so"</item>
         <item>"/system/lib64/libRSCpuRef.so"</item>
         <item>"/system/lib64/libblas.so"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
+        <item>"/system/bin/libsurfaceflinger"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
     </string-array>
