@@ -162,7 +162,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(DeviceSettings.MSM_TOUCHBOOST_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MSM_TOUCHBOOST, 0));
         // Dirac
-        context.startService(new Intent(context, DiracService.class));
+        boolean denabled = sharedPrefs.getBoolean(DeviceSettings.PREF_ENABLE_DIRAC, true);
+        if (denabled) {
+            context.startService(new Intent(context, DiracService.class));
+        }
 
        // Ambient
         context.startService(new Intent(context, SensorsDozeService.class));

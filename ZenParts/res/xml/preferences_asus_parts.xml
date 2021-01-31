@@ -24,7 +24,7 @@
         android:title="@string/audio_enhancer_title">
 
         <com.asus.zenparts.preferences.SecureSettingSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="dirac_enabled"
             android:summary="@string/dirac_summary"
             android:icon="@drawable/ic_dirac"
