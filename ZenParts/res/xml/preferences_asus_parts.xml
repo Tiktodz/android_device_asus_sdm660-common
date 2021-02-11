@@ -292,10 +292,20 @@
         android:title="@string/vibration_title">
 
         <com.asus.zenparts.preferences.VibratorStrengthPreference
-            android:defaultValue="80"
-            android:key="vibration_strength"
+            android:key="vib_strength"
             android:icon="@drawable/ic_vibrate"
-            android:title="@string/vibration_strength_title" />
+            android:title="@string/vib_strength_title"
+            android:summary="@string/vib_strength_summary_head" />
+
+        <com.asus.zenparts.preferences.VibratorCallStrengthPreference
+            android:key="vib_call_strength"
+            android:title="@string/vib_call_strength_title_head"
+            android:summary="@string/vib_call_strength_summary_head" />
+
+        <com.asus.zenparts.preferences.VibratorNotifStrengthPreference
+            android:key="vib_notif_strength"
+            android:title="@string/vib_notif_strength_title_head"
+            android:summary="@string/vib_notif_strength_summary_head" />
 
     </PreferenceCategory>
 
