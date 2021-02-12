@@ -1,0 +1,2 @@
+# Spectrum
+allow toolbox spectrum_prop:property_service { set };

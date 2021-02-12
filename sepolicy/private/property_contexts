@@ -1,0 +1,8 @@
+# Dirac
+persist.audio.dirac                           u:object_r:dirac_prop:s0
+
+# HAL3
+persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
+
+# Spectrum
+persist.spectrum.profile                      u:object_r:spectrum_prop:s0

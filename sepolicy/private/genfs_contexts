@@ -1,0 +1,5 @@
+# Headphone Gain
+genfscon sysfs /kernel/sound_control/headphone_gain                                      u:object_r:sysfs_hgain:s0
+
+# Microphone Gain
+genfscon sysfs /kernel/sound_control/mic_gain                                            u:object_r:sysfs_mgain:s0

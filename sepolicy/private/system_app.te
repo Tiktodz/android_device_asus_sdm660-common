@@ -1,2 +1,25 @@
-binder_call(system_app, storaged)
-get_prop(system_app, persist_camera_prop)
+# HAL3
+get_prop(system_app, camera_prop);
+allow system_app camera_prop:property_service set;
+
+# Headphone Gain
+allow system_app sysfs_hgain:file { open read getattr write };
+
+# Kcal
+allow system_app kcal_dev:file rw_file_perms;
+allow system_app kcal_dev:dir search;
+
+# Microphone Gain
+allow system_app sysfs_mgain:file { open read getattr write };
+
+# Spectrum
+get_prop(system_app, spectrum_prop);
+allow system_app spectrum_prop:property_service set;
+
+# Torch
+allow system_app sysfs_tbrightness:file { open getattr write };
+allow system_app sysfs_leds:dir search;
+
+# Vibrator
+allow system_app sysfs_vibrator:file { getattr open read write };
+allow system_app sysfs_vibrator:dir search;

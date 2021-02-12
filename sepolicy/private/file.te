@@ -1,0 +1,11 @@
+# Headphone Gain
+type sysfs_hgain, sysfs_type, fs_type;
+
+# Kcal
+type kcal_dev, sysfs_type, fs_type;
+
+# Microphone Gain
+type sysfs_mgain, sysfs_type, fs_type;
+
+# Torch Brightness Control
+type sysfs_tbrightness, sysfs_type, fs_type;
