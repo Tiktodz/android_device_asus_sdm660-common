@@ -52,7 +52,8 @@
     <string name="spectrum_gaming">Gaming</string>
     <string name="spectrum_balance">Balance</string>
 
-    <string name="audio_title">Audio</string>
+    <string name="audio_enhancer_title">Audio enhancer</string>
+    <string name="audio_gain_title">Audio gains</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Dirac sound enhancer</string>
@@ -166,7 +167,7 @@
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
     <!-- Gestures: Touchscreen gestures -->
-    <string name="touch_gestures">Gestures</string>
+    <string name="gestures">Gestures</string>
 
     <!-- Log Tile -->
     <string name="quick_settings_log_tile_label">Logs</string>
@@ -263,7 +264,7 @@
     <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.</string>
 
     <!-- Charging -->
-    <string name="smart_charging_main_title">Battery</string>
+    <string name="smart_charging_main_title">Charging</string>
     <string name="smart_charging_title">Smart charging</string>
     <string name="smart_charging_summary">Helps in cooling down &amp; also protects from over charging the device</string>
     <string name="reset_stats_title">Reset battery stats</string>
