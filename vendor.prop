@@ -156,6 +156,10 @@ ro.vendor.sensors.facing=false
 # Shutdown time
 sys.vendor.shutdown.waittime=500
 
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SDM660
+
 # UBWC
 vendor.video.disable.ubwc=1
 
