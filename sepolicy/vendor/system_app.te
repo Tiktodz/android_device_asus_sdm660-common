@@ -6,3 +6,6 @@ allow system_app sysfs_battery_supply:dir { search };
 allow system_app sysfs_battery_supply:file { read };
 allow system_app sysfs_battery_supply:file { open };
 allow system_app sysfs_battery_supply:file { getattr };
+
+# vmallocinfo denial
+allow system_app proc_vmallocinfo:file r_file_perms;
