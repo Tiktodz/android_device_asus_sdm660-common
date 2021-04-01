@@ -59,6 +59,9 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
+# EXFAT
+TARGET_EXFAT_DRIVER := exfat
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
