@@ -4,6 +4,8 @@ allow hal_power_default sysfs_touchpanel:dir r_dir_perms;
 allow hal_power_default sysfs_dclicknode:file rw_file_perms;
 allow hal_power_default sysfs_gesture_node:file rw_file_perms;
 
+typeattribute hal_power_default mlstrustedsubject;
+
 allow hal_power_default input_device:dir r_dir_perms;
 allow hal_power_default input_device:chr_file rw_file_perms;
 
@@ -34,6 +36,10 @@ allow hal_power_default self:capability sys_nice;
 
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
 
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)
