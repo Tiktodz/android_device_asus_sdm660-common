@@ -4,8 +4,6 @@ type proc_touchpanel_double_tap_enable, fs_type, proc_type;
 type sysfs_call_status, sysfs_type, fs_type;
 type sysfs_iio_devices, sysfs_type, fs_type;
 
-type debugfs_sched_features, debugfs_type, fs_type;
-type debugfs_wlan, debugfs_type, fs_type;
 type proc_sysctl_schedboost, proc_type, fs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_rpm, sysfs_type, fs_type;
