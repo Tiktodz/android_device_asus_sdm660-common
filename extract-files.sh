@@ -66,6 +66,19 @@ function blob_fixup() {
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
 
+    system/lib/libwfdaudioclient.so)
+        "${PATCHELF}" --set-soname "libwfdaudioclient.so" "${2}"
+        ;;
+
+    system/lib/libwfdmediautils.so)
+        "${PATCHELF}" --set-soname "libwfdmediautils.so" "${2}"
+        ;;
+
+    system/lib/libwfdmmsink.so)
+        "${PATCHELF}" --add-needed "libwfdaudioclient.so" "${2}"
+        "${PATCHELF}" --add-needed "libwfdmediautils.so" "${2}"
+        ;;
+
     # Use VNDK 29 protobuf
     vendor/lib64/libwvhidl.so)
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
