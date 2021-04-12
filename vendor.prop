@@ -176,7 +176,6 @@ ro.hwui.render_ahead=2
 # IWLAN
 persist.data.iwlan.enable=true
 persist.vendor.data.iwlan.enable=true
-ro.telephony.iwlan_operation_mode=legacy
 
 # Logs
 persist.log.tag.AnalyticsService=S
