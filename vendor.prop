@@ -196,6 +196,9 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # Sensors
 ro.vendor.sdk.sensors.gestures=false
 ro.vendor.sensors.cmc=false
