@@ -1,3 +1,6 @@
+# HAL3
+persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
+
 # Dirac
 persist.audio.dirac                           u:object_r:dirac_prop:s0
 

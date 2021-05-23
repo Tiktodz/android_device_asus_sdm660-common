@@ -4,6 +4,10 @@ allow system_app sysfs_backlight:file { open read getattr write };
 # Earpiece Gain
 allow system_app sysfs_egain:file { open read getattr write };
 
+# HAL3
+get_prop(system_app, camera_prop);
+allow system_app camera_prop:property_service set;
+
 # Headphone Gain
 allow system_app sysfs_hgain:file { open read getattr write };
 
