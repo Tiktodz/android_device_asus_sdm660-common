@@ -67,6 +67,9 @@ on init
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
+    chown system system /sys/module/battery_saver/parameters/enabled
+    chmod 0664 /sys/module/battery_saver/parameters/enabled
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
