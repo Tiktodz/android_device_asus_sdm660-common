@@ -30,6 +30,7 @@ import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.asus.rc
 import /vendor/etc/init/hw/init.device.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
 
 on early-init
     chown root system /dev/kmsg
