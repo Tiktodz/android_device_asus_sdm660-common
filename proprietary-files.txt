@@ -369,10 +369,6 @@ vendor/lib64/libgpustats.so
 # NFC
 vendor/lib/libpn553_fw.so
 
-# NVRAM
-bin/nvram_btwifi
-lib64/libmmi.so
-
 # Perf
 vendor/bin/energy-awareness
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
