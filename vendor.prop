@@ -161,8 +161,8 @@ ro.vendor.sensors.facing=false
 # Shutdown time
 sys.vendor.shutdown.waittime=500
 
-# SoC
-ro.soc.manufacturer=Qualcomm
+# Set system properties identifying the chipset
+ro.soc.manufacturer=QTI
 ro.soc.model=SDM660
 
 # UBWC
