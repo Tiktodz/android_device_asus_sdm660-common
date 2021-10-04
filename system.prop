@@ -25,6 +25,9 @@ persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Display
 vendor.display.enable_default_color_mode=1
 vendor.gralloc.enable_fb_ubwc=1
