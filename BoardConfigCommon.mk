@@ -6,7 +6,9 @@
 
 COMMON_PATH := device/asus/sdm660-common
 
+# Broken Rules
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
 TARGET_ARCH := arm64
