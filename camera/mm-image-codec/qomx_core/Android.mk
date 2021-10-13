@@ -8,7 +8,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS := -Werror \
-                   -g -O0
+                   -g -O0  -Wno-compound-token-split-by-macro
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../qexif
 
