@@ -49,6 +49,7 @@ LOCAL_CFLAGS := -Wall -Wextra -Werror
 endif
 LOCAL_CFLAGS += -DFDLEAK_FLAG
 LOCAL_CFLAGS += -DMEMLEAK_FLAG
+
 #HAL 1.0 source
 
 ifeq ($(TARGET_SUPPORT_HAL1),false)
