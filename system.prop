@@ -75,6 +75,9 @@ ro.surface_flinger.set_display_power_timer_ms=10000
 ro.surface_flinger.set_touch_timer_ms=5000
 ro.surface_flinger.set_idle_timer_ms=9000
 
+# Storage.xml moment
+persist.sys.binary_xml=false
+
 # Time
 persist.timed.enable=true
 
