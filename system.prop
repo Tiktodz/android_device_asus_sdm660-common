@@ -61,6 +61,9 @@ persist.radio.VT_CAM_INTERFACE=2
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
 
+# System
+persist.sys.binary_xml=false
+
 # Time
 persist.timed.enable=true
 
