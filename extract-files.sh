@@ -65,6 +65,18 @@ function blob_fixup() {
     system/lib64/libfm-hci.so | system/lib64/libwfdnative.so | system/lib/libfm-hci.so | system/lib/libwfdnative.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
+        # Fix missing symbols
+        product/lib64/lib-imscamera.so | product/lib64/lib-imsvideocodec.so | product/lib/lib-imscamera.so | product/lib/lib-imsvideocodec.so)
+            for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
+            done
+            ;;
+        # Fix missing symbols
+        vendor/lib/libmot_gpu_mapper.so)
+            for LIBGUI_SHIM in $(grep -L "libgui_shim_vendor.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${LIBGUI_SHIM}"
+            done
+            ;;
     esac
 }
 
