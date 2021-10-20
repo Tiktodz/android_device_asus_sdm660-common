@@ -36,4 +36,7 @@
     <!-- Turn off GPS as a default. -->
     <bool name="def_location_providers_allowed">false</bool>
 
+    <!-- Speed up the animations -->
+    <fraction name="def_window_animation_scale">50%</fraction>
+    <fraction name="def_window_transition_scale">50%</fraction>
 </resources>
