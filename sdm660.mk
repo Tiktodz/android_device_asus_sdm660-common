@@ -255,7 +255,8 @@ PRODUCT_COPY_FILES += \
 
 # Network
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
 PRODUCT_COPY_FILES += \
