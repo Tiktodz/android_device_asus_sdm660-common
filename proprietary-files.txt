@@ -497,6 +497,9 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3ffb7301b6c185b1
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|75a58827c0b4e06e2ca8163b6a904dab2af3be6a
 vendor/radio/qcril_database/qcril.db|86286c24a227cb968dac1f7ccfe0ad26fe4fd462
 
+# Radio - Telephony - from coral - google/coral/coral:12/SPB5.210812.002/7671067:user/release-keys
+-system_ext/app/datastatusnotification/datastatusnotification.apk|f33ce45ec04a67b88e9f4da52378153c77d21e77
+
 # Radio - IMS - from ddv_sprout 11-RKQ1.210607.001-00WW_3_440-release-keys
 -system_ext/app/imssettings/imssettings.apk|8e27882a4ecd10d69a5774b2834781cc60628a3f
 -system_ext/app/uceShimService/uceShimService.apk|3b5b6fb89581e92eb151fcc9ddffe53609e6dd4c
