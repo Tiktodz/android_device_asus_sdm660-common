@@ -160,7 +160,7 @@ PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 BOARD_VNDK_VERSION := current
 
 # Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2020-12-05
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Verity
 # Only needed for signing
