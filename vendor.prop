@@ -106,6 +106,7 @@ debug.sf.recomputecrop=0
 persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196610
 vendor.display.disable_rotator_downscale=1
+vendor.display.disable_scaler=0
 renderthread.skia.reduceopstasksplitting=true
 
 # DPM
