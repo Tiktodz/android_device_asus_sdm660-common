@@ -298,5 +298,8 @@
         <item>com.google.android.GoogleCamera</item>
         <item>org.lineageos.aperture.dev</item>
     </string-array>
+    
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
 
 </resources>
