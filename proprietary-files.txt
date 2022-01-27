@@ -342,6 +342,10 @@ vendor/lib64/libsdm-diag.so|2ba98c20d05e34501a4423f55bec4da3f27711ad
 vendor/lib64/libsdmextension.so|58518bd600b7ced736db072d858e862abd2f8f0f
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
+# Graphics - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/lib/libtinyxml.so|1303bce85570b6de6f6e60a3edff508afe3fc60f
+vendor/lib64/libtinyxml.so|e00e92ead90d45240484c159dfe20f29c9cd5b64
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc

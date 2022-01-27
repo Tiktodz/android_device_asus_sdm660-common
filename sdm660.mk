@@ -115,7 +115,6 @@ PRODUCT_PACKAGES += \
     memtrack.sdm660 \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
-    libtinyxml \
     libqdMetaData \
     libqdMetaData.vendor \
     libvulkan \
