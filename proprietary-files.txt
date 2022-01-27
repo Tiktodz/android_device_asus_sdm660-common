@@ -318,6 +318,10 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/hw/vulkan.sdm660.so
 vendor/lib64/hw/vulkan.sdm660.so
 
+# Graphics - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/lib/libtinyxml.so|1303bce85570b6de6f6e60a3edff508afe3fc60f
+vendor/lib64/libtinyxml.so|e00e92ead90d45240484c159dfe20f29c9cd5b64
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
