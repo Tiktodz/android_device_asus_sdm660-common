@@ -338,9 +338,9 @@ vendor/lib64/libhdr_tm.so
 
 # Graphics (SDM)
 vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so
+vendor/lib/libsdm-color.so|9c80ac4e059bff1c53814e9f5f71a5fbe38bce40
 vendor/lib/libsdm-diag.so
-vendor/lib/libsdmextension.so
+vendor/lib/libsdmextension.so|913503f002aa2afbeca90d429bac4bff4a2266e0
 vendor/lib/libtinyxml2_1.so
 vendor/lib64/libqseed3.so
 vendor/lib64/libsdm-color.so
