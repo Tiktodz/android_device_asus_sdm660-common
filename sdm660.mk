@@ -159,26 +159,19 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-impl-qti \
-    android.hardware.gnss@2.0-service-qti \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
     libbatching \
     libgeofencing \
-    libgnss \
-    libgps.utils \
-    liblocation_api \
-    libsensorndkbridge \
-    libwifi-hal-ctrl
+    libgnss
 
 PRODUCT_PACKAGES += \
-    apdr.conf \
-    gps.conf \
-    flp.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf \
-    xtwifi.conf
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gps/etc/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Health
 PRODUCT_PACKAGES += \
@@ -399,6 +392,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    libsensorndkbridge \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     android.frameworks.sensorservice@1.0.vendor
@@ -476,6 +470,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.5.vendor \
     hostapd \
     libwifi-hal-qcom \
+    libwifi-hal-ctrl \
     libwpa_client \
     WifiOverlay \
     wpa_supplicant \
