@@ -174,7 +174,6 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Perf
-ro.vendor.extension_library=libqti-perfd-client.so
 vendor.perf.framepacing.enable=1
 
 # Radio
