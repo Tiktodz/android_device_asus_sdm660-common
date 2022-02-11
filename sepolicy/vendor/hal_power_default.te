@@ -10,3 +10,11 @@ allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_p
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
 
 set_prop(hal_power_default, vendor_power_prop)
+
+allow hal_power_default sysfs:file { read open getattr };
+
+allow hal_power_default proc:file { write };
+r_dir_file(hal_power_default, sysfs_graphics)
+
+# To dump
+allow hal_power_default cgroup:file read;
