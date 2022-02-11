@@ -344,6 +344,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.asus_sdm660-libperfmgr \
     vendor.qti.hardware.perf@2.2.vendor
 
+# Powerhint
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
