@@ -185,7 +185,6 @@ ro.telephony.iwlan_operation_mode=legacy
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Perf
-ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
 
 # Radio
