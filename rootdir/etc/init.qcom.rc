@@ -67,6 +67,8 @@ on init
 
     write /sys/class/graphics/fb0/idle_time 100
 
+    write /sys/class/graphics/fb0/idle_time 100
+
 on early-boot
     write /dev/ipa 1
     # set RLIMIT_MEMLOCK to 64MB
