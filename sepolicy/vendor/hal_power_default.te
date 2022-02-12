@@ -1,7 +1,6 @@
 # Allow powerhal to read/write to dt2w node
 allow hal_power_default proc_tpd_gesture:file rw_file_perms;
 
-r_dir_file(hal_power_default, debugfs_rpm)
 r_dir_file(hal_power_default, sysfs_graphics)
 
 allow hal_power_default device_latency:chr_file rw_file_perms;
