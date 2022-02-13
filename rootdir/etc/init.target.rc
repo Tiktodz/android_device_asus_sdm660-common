@@ -75,6 +75,12 @@ on post-fs
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
 
+on late-fs
+    # Start services for bootanim
+    start servicemanager
+    start surfaceflinger
+    start bootanim
+
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
