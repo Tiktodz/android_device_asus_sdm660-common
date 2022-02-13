@@ -101,6 +101,10 @@ on early-boot
     chown system system /mnt/vendor/persist/sensors/sensors_settings
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
 
+    # Report max frequency to unity tasks.
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
 on boot
     start vendor.rmt_storage
     start vendor.rfs_access
