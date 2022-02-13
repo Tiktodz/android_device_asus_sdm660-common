@@ -82,6 +82,12 @@ on post-fs
     wait_for_prop vendor.sys.listeners.registered true
     write /dev/ipa 1
 
+on late-fs
+    # Start services for bootanim
+    start servicemanager
+    start surfaceflinger
+    start bootanim
+
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
