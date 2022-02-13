@@ -340,8 +340,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power-service.asus_sdm660-libperfmgr
 
 # Powerhint
 PRODUCT_COPY_FILES += \
