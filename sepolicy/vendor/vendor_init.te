@@ -1,6 +1,6 @@
 allow init adsprpcd_file:file mounton;
 allow vendor_init nfc_sensors_prop:file { read };
-
+allow vendor_init proc:file w_file_perms;
 allow vendor_init proc_dirty:file w_file_perms;
 allow vendor_init proc_dirty_ratio:file w_file_perms;
 
