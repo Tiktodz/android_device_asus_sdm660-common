@@ -77,6 +77,9 @@ on fs
     chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
     mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
 
+    # Start HW service manager early
+    start hwservicemanager
+
 on post-fs
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
@@ -84,10 +87,14 @@ on post-fs
 
 on late-fs
     # Start services for bootanim
-    start hwservicemanager
     start servicemanager
     start surfaceflinger
     start bootanim
+
+    # Make sure HW service manager started and start required HAL services
+    wait_for_prop hwservicemanager.ready true
+    start vendor.configstore-hal
+    start vendor.gralloc-2-0
 
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
