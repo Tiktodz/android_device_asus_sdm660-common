@@ -1,3 +1,5 @@
+typeattribute hal_power_default mlstrustedsubject;
+
 # Allow powerhal to read/write to dt2w node
 allow hal_power_default proc_tpd_gesture:file rw_file_perms;
 
@@ -8,6 +10,10 @@ allow hal_power_default device_latency:chr_file rw_file_perms;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_perms;
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
 
 set_prop(hal_power_default, vendor_power_prop)
 
