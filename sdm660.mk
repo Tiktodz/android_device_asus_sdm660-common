@@ -403,6 +403,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.uclamp.rc \
     ueventd.qcom.rc
 
 # Ramdisk-USB
