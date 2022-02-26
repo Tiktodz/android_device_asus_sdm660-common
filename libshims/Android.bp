@@ -1,0 +1,10 @@
+//
+// Copyright (C) 2021 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libshim_wfd",
+    srcs : ["wfd_shim.cpp"],
+}
