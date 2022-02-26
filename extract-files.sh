@@ -60,6 +60,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+         
+        lib64/libwfdnative.so | lib/libwfdnative.so | lib/libwfdservice.so | lib/libwfdcommonutils.so | lib/libwfdmmsrc.so | lib/libwfdmmsink.so)
+        "${PATCHELF}" --add-needed "libshim_wfd.so" "${2}"
+        ;;
 
     esac
 }
