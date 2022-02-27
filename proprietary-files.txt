@@ -268,17 +268,12 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|7b67b47030f00af1c2e207995
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|6585b5976a98053fb4d2b51c32337ebe8960d427
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|61d7c35edb403f8de4be2e483431cb26109ef0ae
 
-# FM
--product/lib/vendor.qti.hardware.fm@1.0.so
--product/lib64/vendor.qti.hardware.fm@1.0.so
-system/lib/fm_helium.so
-system/lib/libfm-hci.so
-system/lib64/fm_helium.so
-system/lib64/libfm-hci.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+# FM - from LA.UM.9.2.r1-03500-SDMxx0.0
+system_ext/lib64/fm_helium.so|b2440e4feaae8a7f5e2269525520f9774b6962fc
+system_ext/lib64/libfm-hci.so|758c6e7cfafc964b5cd9d71806ec5455e0d78716
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|5eaf6d5d67361ff6236c1ec4f5225c6185a904a6
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|c828f2be5415f779bbd9113ed944f981a5fa1f2c
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti

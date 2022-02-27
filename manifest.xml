@@ -395,6 +395,7 @@
             <name>IFmHci</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IFmHci/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
