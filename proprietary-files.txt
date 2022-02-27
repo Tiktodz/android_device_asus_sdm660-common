@@ -491,11 +491,11 @@ vendor/lib64/libqti-perfd.so|3dbd50a777b7db759d289da7f85f1361b27849f6
 vendor/lib64/libqti-util.so|6c1f2bdc6e663a913c3090cf9880101a61c5cad5
 vendor/lib64/libqti-utils.so|851798783cd77f7f847a67f1fff65ff727c9522b
 
-# Peripheral manager
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib/libperipheral_client.so
-vendor/lib64/libperipheral_client.so
+# Peripheral - from LA.UM.9.2.r1-03500-SDMxx0.0
+vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
+vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
+vendor/lib/libperipheral_client.so|8f7e9ebd1a8dc6afc878b97c078a3deb97963d68
+vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
