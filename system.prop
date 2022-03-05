@@ -74,5 +74,6 @@ persist.sys.binary_xml=false
 persist.timed.enable=true
 
 # WiFi Display
+media.wfd.max_resolution=5
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
