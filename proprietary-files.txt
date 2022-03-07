@@ -385,13 +385,15 @@ vendor/lib64/hw/vulkan.sdm660.so
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
+
+# Keymaster - from LA.UM.9.2.r1-03500-SDMxx0.0
+vendor/lib/libkeymasterdeviceutils.so|245fc0eda2b287ce5ce6c261edfd768508753c85
+vendor/lib/libkeymasterprovision.so|4311012c712802c20e566bea2b174113cf082326
+vendor/lib/libkeymasterutils.so|a2f7e894af47c33c8bf700b5a1e0a676196affde
+vendor/lib64/libkeymasterdeviceutils.so|e0ce05020bbd5f9ae3666e37fb67826d410e2c7b
+vendor/lib64/libkeymasterprovision.so|287c2b75d1839bae2d56662f3af7551c95c9ced3
+vendor/lib64/libkeymasterutils.so|2392abef423c0610d9625670f1ff3063532e9bc1
 
 # Listen
 vendor/lib/libadpcmdec.so
