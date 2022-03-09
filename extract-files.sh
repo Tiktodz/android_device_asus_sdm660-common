@@ -61,15 +61,6 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    # remove android.hidl.base dependency
-    system/lib64/libfm-hci.so | system/lib64/libwfdnative.so | system/lib/libfm-hci.so | system/lib/libwfdnative.so)
-        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
-
-    product/lib64/libdpmframework.so)
-        "${PATCHELF}" --replace-needed "libcutils.so" "libcutils-v29.so" "${2}"
-        "${PATCHELF}" --add-needed "libcutils.so" "${2}"
-        ;;
     esac
 }
 
