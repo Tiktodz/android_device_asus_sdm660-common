@@ -161,11 +161,15 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-impl-qti \
-    android.hardware.gnss@2.0-service-qti \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1.vendor \
     libbatching \
     libgeofencing \
     libgnss \
+    libgnsspps \
+    libsynergy_loc_api \
     libgps.utils \
     liblocation_api \
     libsensorndkbridge \
@@ -174,6 +178,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     apdr.conf \
     gps.conf \
+    gnss_antenna_info.conf \
     flp.conf \
     izat.conf \
     lowi.conf \
