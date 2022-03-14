@@ -46,7 +46,6 @@ persist.vendor.overlay.izat.optin=rro
 dev.pm.dyn_samplingrate=1
 debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
-persist.hwc.enable_vds=1
 sdm.debug.disable_skip_validate=1
 
 # IORap app launch prefetching using Perfetto traces and madvise
@@ -92,3 +91,4 @@ persist.timed.enable=true
 # WiFi Display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+persist.hwc.enable_vds=1
