@@ -19,3 +19,6 @@ dontaudit {
     sensors
     vendor_dpmd
 } diag_device:chr_file { read write };
+
+allow radio cnd:binder call;
+allow radio hal_datafactory_hwservice:hwservice_manager find;
