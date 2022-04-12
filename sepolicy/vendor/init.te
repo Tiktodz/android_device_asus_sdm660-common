@@ -4,3 +4,6 @@ dontaudit init firmware_file:filesystem getattr;
 allow init nfc_sensors_prop:file { read  relabelto  write };
 allow init vendor_camera_prop:file { relabelto  write };
 allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
+allow init kernel:security { setcheckreqprot };
+allow init kernel:system { module_request };
+allow init proc:file { open  setattr  write };
