@@ -208,7 +208,6 @@ vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/lib/libQSEEComAPI.so|b88a74220b7082c4e066ab98664e653b9f0e76ea
-vendor/lib/libsdedrm.so|9bfbcb30a2d91a18c54111b403df91dee07c82ab
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|1662ff9ec4e65d9b42f41ab2536378904a183627
 vendor/lib64/libdrmfs.so|11a6e61c2d1e66d0ed89848bb56d4c9852379a12
 vendor/lib64/libdrmtime.so|d1e84e6bc6545ecc8dea1c648de0b691c2de7e6c
@@ -234,7 +233,6 @@ vendor/bin/hdcp2p2prov|f02c04b8b90ed70f9de927465ebe7f2db9bf1b4f
 vendor/lib64/libhdcp1prov.so|349ce16433e7f9c1b1c385818181066f3fdba4cd
 vendor/lib64/libhdcp2p2prov.so|4dfba0a0245784f302313c206efc156f80cc2de7
 vendor/lib64/libhdcpsrm.so|1cb91cbaad3c0a44df4f244f8fb462a9f0ebb0b2
-vendor/lib64/libmm-hdcpmgr.so|b4fa602dfd356ccc3752660dd1690aca568f765f
 
 # DRM-Widevine - from LA.UM.9.2.r1-03500-SDMxx0.0 
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2158f47423c723a9da29bb81bb16987a1e715c21
@@ -323,64 +321,71 @@ vendor/lib64/vendor.qti.gnss@4.0.so|e38ae43982dc62bf48193a6c3eb2ae385adb37aa
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 
-# Graphics
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/egl/libQTapGLES.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
-vendor/lib/librs_adreno.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/egl/libQTapGLES.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libbccQTI.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libCB.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/librs_adreno.so
-vendor/lib64/librs_adreno_sha1.so
+# Graphics (Adreno) - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+vendor/lib/egl/eglSubDriverAndroid.so|1ce98182c6bd27435e7f02a9cba3c434c4ae6a73
+vendor/lib/egl/libEGL_adreno.so|5611a6caa50562757d812553642a0a45fcc12668
+vendor/lib/egl/libGLESv1_CM_adreno.so|446279f43811de885507bdd3d6491da8f0cfd26d
+vendor/lib/egl/libGLESv2_adreno.so|b6e14193df47183cb2c5824623e8886b2811880f
+vendor/lib/egl/libq3dtools_adreno.so|49c03ff3c14e17af525c66f5cf017504e689f54e
+vendor/lib/egl/libq3dtools_esx.so|a0dbaa0b6f486d3bed311eb6481ef17ea0ef386e
+vendor/lib/libC2D2.so|7ffbb30a7b99d532eaf20b4a117fd908f1acdc01
+vendor/lib/libCB.so|543fb89b5ef84cf1652a12879a19e60b3434fcf7
+vendor/lib/libOpenCL.so|84bf30e06f738179363c71b8ffc6864042fe4527
+vendor/lib/libVkLayer_q3dtools.so|527589b3780440dc26aceebc97866dadbeeebd86
+vendor/lib/libadreno_utils.so|60f9f3efdb497684645610fa4be30b373c3e6a67
+vendor/lib/libc2d30_bltlib.so|25316402ca8b7999f6d7411cea8c77e577b3a5e1
+vendor/lib/libgpudataproducer.so|4dff64c759fb233236ae0cca69c87fb763900a5c
+vendor/lib/libgsl.so|c07882201eaa3e8fba9f6fc27812fe835e58adf2
+vendor/lib/libllvm-glnext.so|1c086795cb502273b5535b391b0e95f90bcbd198
+vendor/lib/libllvm-qcom.so|e79a7e1ab12b238345c1c2ce3c72a889520ffe25
+vendor/lib/librs_adreno.so|21cb023ba33062fbb1ad9b1738239c79a5a8ec43
+vendor/lib64/egl/eglSubDriverAndroid.so|d6dc70f08a0e68e897c2c8a956a8c2f3e036c540
+vendor/lib64/egl/libEGL_adreno.so|d602670a45e49916be5e0c2c60a8f0fe3f526791
+vendor/lib64/egl/libGLESv1_CM_adreno.so|b45486353fceb47ec419ef580fdf6d2305a842ff
+vendor/lib64/egl/libGLESv2_adreno.so|dc4748f62cde933f9150824096a3425607360cfe
+vendor/lib64/egl/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
+vendor/lib64/egl/libq3dtools_esx.so|91bc18053437611c058acae0b460665c61fa96a5
+vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
+vendor/lib64/libCB.so|436c7d0648d3d377ac148ef6b661d12361055c2f
+vendor/lib64/libOpenCL.so|b11edb1001dd25079e9f197fcd3910285cba0311
+vendor/lib64/libVkLayer_q3dtools.so|9590e902f9a2205eee55dd041cf165e3b3f4847e
+vendor/lib64/libadreno_utils.so|4f2a1050cd1ba2e967096094106c1059e330abf5
+vendor/lib64/libc2d30_bltlib.so|68dda7852c6093578b69e88ce4db10243a48e02a
+vendor/lib64/libgpudataproducer.so|92fcff9fc1bb47bd0c2973d2fd6c19afb535e297
+vendor/lib64/libgsl.so|16b2023fcd994f8b3c0a7b390be51960e2d7ce08
+vendor/lib64/libllvm-glnext.so|115c5a7d2463eacff39b0d0a04678bbb91c36d23
+vendor/lib64/libllvm-qcom.so|c4a55bdd7291c722dc5bf84064e2914e5256af7a
+vendor/lib64/librs_adreno.so|bf87696c917d75da5557c194098faaae5e303a0b
 
-# Graphics (HDR)
-vendor/lib/libhdr_tm.so
-vendor/lib64/libhdr_tm.so
+# Graphics (Vulkan) - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+vendor/lib/hw/vulkan.adreno.so|0e40d7a90d97cd8bdcbed86d2e0f69388c32b2ec
+vendor/lib64/hw/vulkan.adreno.so|08f912115df1e82f32b7351cd53fb1ec92d4fa96
 
-# Graphics (SDM)
-vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Graphics (DRM) - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+vendor/lib/libsdedrm.so|9bfbcb30a2d91a18c54111b403df91dee07c82ab
+vendor/lib64/libsdedrm.so|a6af861a2db5721e0ef1d9606713e967c3d39b1c
 
-# Graphics (Vulkan)
-vendor/lib/hw/vulkan.sdm660.so
-vendor/lib64/hw/vulkan.sdm660.so
+# Graphics (HDCP) - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+vendor/lib/libmm-hdcpmgr.so|fe2a09f24053c4c20f290b68372bbf20b89d94e1
+vendor/lib64/libmm-hdcpmgr.so|b4fa602dfd356ccc3752660dd1690aca568f765f
+
+# Graphics (HDR) - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+vendor/lib/libhdr_tm.so|a2292af314f9fa86b9ec2bb11ad72bf85e959842
+vendor/lib64/libhdr_tm.so|a1b9bbad12217e6b79951774801aa54be6460fd6
+
+# Graphics (SDM) - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+-vendor/lib/libsdm-disp-vndapis.so|efe67908e419b8db34068896c9b45cdf9b4e535b
+-vendor/lib64/libsdm-disp-vndapis.so|8e92d1f17735c26658c17148da6e1882b5bc6fb0
+vendor/lib/libqseed3.so|1a67e4c3e7d904dc3d3af35c0f516fe13ed88bcb
+vendor/lib/libsdm-color.so|0ac3aa59aa06eed8b66bc72d8cd74ea1b2eb34fb
+vendor/lib/libsdm-diag.so|a2b532158e12562e1fb74695bf829de1b94c2cde
+vendor/lib/libsdmextension.so|cb5d63a477317806cf1a95cfd5393fe83dd86f94
+vendor/lib/libtinyxml2_1.so|aec76b36890b163f9cf1be594d6b082887f0a9b2
+vendor/lib64/libqseed3.so|a858c83fb38ef7acd21ea0a23f36ef22ba8c06ef
+vendor/lib64/libsdm-color.so|d9bec7004ec8fd292bb0cd3388359448ca96bd23
+vendor/lib64/libsdm-diag.so|2ba98c20d05e34501a4423f55bec4da3f27711ad
+vendor/lib64/libsdmextension.so|58518bd600b7ced736db072d858e862abd2f8f0f
+vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
@@ -498,15 +503,24 @@ vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
 vendor/lib/libperipheral_client.so|8f7e9ebd1a8dc6afc878b97c078a3deb97963d68
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
-# Postprocessing
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/mm-pp-dpps
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Postprocessing - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+-system_ext/app/colorservice/colorservice.apk|a792c063ee457bb4b08f551177831c77d8455d53
+etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
+framework/com.qti.snapdragon.sdk.display.jar|657b74d0517f6438d3e0914f92f3b8de6d2a10a1
+lib64/libsdm-disp-apis.so|131b769dcda8e95cd999f912a9fa48636c792092
+system_ext/lib64/libsd_sdk_display.so|a73824afb15eca45e680ff9e49cf9144fe35b3d4
+system_ext/lib64/vendor.display.color@1.0.so|285a872d9de41b6de48dd1b3d288e7de56c35ba6
+system_ext/lib64/vendor.display.color@1.1.so|241abd3090b46d3ab83ff3be229352b1bb83fbda
+system_ext/lib64/vendor.display.color@1.2.so|7bc8f248db4656ffeb8043f480890ed12171cd55
+system_ext/lib64/vendor.display.postproc@1.0.so|2c16c0832f90e0094fd3dc09e3d40c7b3923e195
+vendor/bin/hw/vendor.display.color@1.0-service|815cc36f3722fbfb5fdd52f6678309d207888038
+vendor/bin/mm-pp-dpps|0aa22b96ee8de5f17386f992ba9f20bc5051261f
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib64/libdisp-aba.so|4aed9d5d297c812bf5dd1aedede4f1c7dec22cf9
+vendor/lib64/vendor.display.color@1.0.so|09cb45881528c6d4675754c88c108f30dd1da12a
+vendor/lib64/vendor.display.color@1.1.so|3cf0d256372bd418462326e6067b4e1213226194
+vendor/lib64/vendor.display.color@1.2.so|8184e5d3e404864b1a1518b4d4e2012a5839660b
+vendor/lib64/vendor.display.postproc@1.0.so|86ef4e868f7abb95d555a4d086a8c4193920803f
 
 # QMI (diag) - from LA.UM.9.2.r1-03500-SDMxx0.0
 system_ext/lib64/libdiag_system.so|0581aa56cdf6041388bca51e60b5792345f02736
