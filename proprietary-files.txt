@@ -479,6 +479,15 @@ vendor/lib/libperipheral_client.so|8f7e9ebd1a8dc6afc878b97c078a3deb97963d68
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing - from SLD_sprout 11-RKQ1.210607.001-00WW_3_490-release-keys
+-system_ext/app/colorservice/colorservice.apk|a792c063ee457bb4b08f551177831c77d8455d53
+etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
+framework/com.qti.snapdragon.sdk.display.jar|657b74d0517f6438d3e0914f92f3b8de6d2a10a1
+lib64/libsdm-disp-apis.so|131b769dcda8e95cd999f912a9fa48636c792092
+system_ext/lib64/libsd_sdk_display.so|a73824afb15eca45e680ff9e49cf9144fe35b3d4
+system_ext/lib64/vendor.display.color@1.0.so|285a872d9de41b6de48dd1b3d288e7de56c35ba6
+system_ext/lib64/vendor.display.color@1.1.so|241abd3090b46d3ab83ff3be229352b1bb83fbda
+system_ext/lib64/vendor.display.color@1.2.so|7bc8f248db4656ffeb8043f480890ed12171cd55
+system_ext/lib64/vendor.display.postproc@1.0.so|2c16c0832f90e0094fd3dc09e3d40c7b3923e195
 vendor/bin/hw/vendor.display.color@1.0-service|815cc36f3722fbfb5fdd52f6678309d207888038
 vendor/bin/mm-pp-dpps|0aa22b96ee8de5f17386f992ba9f20bc5051261f
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
