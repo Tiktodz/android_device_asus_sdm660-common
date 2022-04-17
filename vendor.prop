@@ -146,7 +146,7 @@ ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
 # Graphics
 debug.cpurend.vsync=false
 ro.hardware.egl=adreno
-ro.hardware.vulkan=sdm660
+ro.hardware.vulkan=adreno
 vendor.display.enable_force_split=1
 vendor.gralloc.disable_ahardware_buffer=1
 
