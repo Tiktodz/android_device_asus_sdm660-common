@@ -301,4 +301,7 @@
          etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 
+    <!-- Exempt cne from privacy (location) indicators -->
+    <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
 </resources>
