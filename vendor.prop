@@ -121,6 +121,9 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=8m
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
