@@ -44,9 +44,6 @@ TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power-libperfmgr/power/power-mode.cpp
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
-# Camera
-TARGET_USES_QTI_CAMERA_DEVICE := true
-
 # Display
 TARGET_SCREEN_DENSITY := 420
 BOARD_USES_ADRENO := true
