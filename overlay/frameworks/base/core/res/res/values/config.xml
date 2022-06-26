@@ -400,4 +400,7 @@
         <!-- Via Browser -->
         <item>mark.via.gp</item>
     </string-array>
+
+    <!-- Exempt ImsService from privacy (location) indicators -->
+    <string name="config_systemAudioIntelligence" translatable="false">org.codeaurora.ims</string>
 </resources>
