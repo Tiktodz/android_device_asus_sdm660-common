@@ -11,9 +11,6 @@ $(call inherit-product, vendor/asus/sdm660-common/sdm660-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 PRODUCT_COMPRESSED_APEX := false
 
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
-
 # Include display HAL makefiles.
 include hardware/qcom-caf/msm8998/display/display-commonsys-intf/config/display-interfaces-product.mk
 include hardware/qcom-caf/msm8998/display/display-commonsys-intf/config/display-product-system.mk
