@@ -27,6 +27,10 @@ vendor.display.disable_skip_validate=1
 # DPM
 persist.vendor.dpm.feature=1
 
+# Fingerprint
+persist.sys.fingerauto=1
+persist.sys.iscdfinger_998eas=1
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
