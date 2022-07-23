@@ -2688,8 +2688,8 @@ case "$target" in
                 "317" | "324" | "325" | "326" | "345" | "346" )
 
             # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            #echo 0-3 > /dev/cpuset/background/cpus
+            #echo 0-3 > /dev/cpuset/system-background/cpus
 
             #if the kernel version >=4.14,use the schedutil governor
             KernelVersionStr=`cat /proc/sys/kernel/osrelease`
