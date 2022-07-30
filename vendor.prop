@@ -124,6 +124,7 @@ debug.cpurend.vsync=false
 renderthread.skia.reduceopstasksplitting=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=sdm660
+vendor.gralloc.disable_ahardware_buffer=1
 
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
