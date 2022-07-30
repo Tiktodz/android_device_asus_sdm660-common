@@ -165,6 +165,7 @@ ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
 debug.renderengine.backend=skiaglthreaded
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
+vendor.gralloc.disable_ahardware_buffer=1
 
 # HEH filename encryption is being dropped
 ro.crypto.volume.filenames_mode=aes-256-cts
