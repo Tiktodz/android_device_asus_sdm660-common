@@ -152,6 +152,7 @@ debug.cpurend.vsync=false
 debug.renderengine.backend=threaded
 ro.hardware.egl=adreno
 ro.hardware.vulkan=sdm660
+vendor.gralloc.disable_ahardware_buffer=1
 
 # HEH filename encryption is being dropped
 ro.crypto.volume.filenames_mode=aes-256-cts
