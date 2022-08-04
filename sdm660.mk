@@ -102,8 +102,9 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.sdm660
-    
+    camera.sdm660 \
+    CameraGO
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0 \
     android.hardware.camera.device@3.4 \
