@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     audio_amplifier.sdm660 \
     audio.bluetooth.default \
     audio.primary.sdm660 \
