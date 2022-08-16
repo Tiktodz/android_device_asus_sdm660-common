@@ -1,0 +1,1 @@
+allow dnsmasq dnsmasq:capability { sys_admin };
