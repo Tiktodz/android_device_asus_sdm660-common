@@ -509,4 +509,5 @@ PRODUCT_PACKAGES += \
     init.spectrum.sh \
     init.zenparts.rc \
     init.zenparts.sh \
-    ZenParts
+    ZenParts \
+    XiaomiDirac
