@@ -234,3 +234,8 @@ ro.surface_flinger.set_idle_timer_ms=80
 
 # UBWC
 vendor.video.disable.ubwc=1
+
+# USB
+vendor.usb.rmnet.func.name=rmnet_bam
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=rndis_bam
