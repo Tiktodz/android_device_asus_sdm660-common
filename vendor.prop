@@ -91,6 +91,7 @@ persist.vendor.camera.mpo.disabled=1
 persist.vendor.camera.preview.ubwc=0
 persist.vendor.camera.HAL3.enabled=1
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.google.android.GoogleCamera,com.google.android.apps.cameralite
+persist.vendor.camera.perflock.enable=0
 
 # Codec2 switch
 debug.stagefright.omx_default_rank.sw-audio=1
