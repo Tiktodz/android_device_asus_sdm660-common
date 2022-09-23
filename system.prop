@@ -51,6 +51,12 @@ vendor.vidc.enc.disable_bframes=1
 vendor.vidc.dec.enable.downscalar=1
 vendor.vidc.enc.disable.pq=true
 
+# Iorapd
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
 # Netflix
 ro.netflix.bsp_rev=Q660-13149-1
 ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187
