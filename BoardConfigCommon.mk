@@ -38,9 +38,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
-
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
