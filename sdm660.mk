@@ -9,7 +9,6 @@ $(call inherit-product, vendor/asus/sdm660-common/sdm660-common-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-PRODUCT_COMPRESSED_APEX := false
 
 # Include display HAL makefiles.
 include hardware/qcom-caf/msm8998/display/display-commonsys-intf/config/display-interfaces-product.mk
