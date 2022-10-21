@@ -421,6 +421,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2.vendor
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_asus
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
