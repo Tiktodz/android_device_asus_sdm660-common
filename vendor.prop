@@ -150,6 +150,9 @@ persist.data.iwlan.enable=true
 persist.vendor.data.iwlan.enable=true
 ro.telephony.iwlan_operation_mode=legacy
 
+# HEH filename encryption is being dropped
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
 
