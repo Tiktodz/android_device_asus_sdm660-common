@@ -196,11 +196,7 @@
          by default. This value will be used during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. -->
-    <bool name="config_setColorTransformAccelerated">true</bool>
-
-   <!-- The duration (in milliseconds) for the outgoing sms authorization request to timeout.-->
+    <!-- The duration (in milliseconds) for the outgoing sms authorization request to timeout.-->
    <integer name="config_sms_authorization_timeout_ms">15000</integer>
 
    <!-- Enable SMS authorization support -->
