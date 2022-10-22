@@ -86,14 +86,11 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 TARGET_KERNEL_VERSION := 4.4
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
-TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_LLVM_BINUTILS := false
+TARGET_KERNEL_CLANG_VERSION := azure-clang
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-azure
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 TARGET_KERNEL_OPTIONAL_LD := true
-
-# Additional Kernel Flags
-TARGET_KERNEL_ADDITIONAL_FLAGS +=
-HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument" LLVM=1 LLVM_IAS=1
+TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
