@@ -189,6 +189,7 @@ persist.dbg.wfc_avail_ovr=1
 ro.vendor.sdk.sensors.gestures=false
 ro.vendor.sensors.cmc=false
 ro.vendor.sensors.facing=false
+ro.vendor.sensors.smd=false
 
 # Shutdown time
 sys.vendor.shutdown.waittime=500
