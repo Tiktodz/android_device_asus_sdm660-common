@@ -215,6 +215,10 @@ ro.surface_flinger.set_idle_timer_ms=9000
 # UBWC
 vendor.video.disable.ubwc=1
 
+
+# Watchdog
+ro.hw_timeout_multiplier=3
+
 # Zram-writeback
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
