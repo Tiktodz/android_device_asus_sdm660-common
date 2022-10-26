@@ -50,6 +50,8 @@ vendor.vidc.enc.disable.pq=true
 
 # Netflix
 ro.netflix.bsp_rev=Q660-13149-1
+ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187
+ro.netflix.signup=1
 
 # NFC
 ro.nfc.port=I2C
