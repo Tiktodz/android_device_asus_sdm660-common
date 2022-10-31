@@ -9,7 +9,6 @@ vendor.bluetooth.soc=cherokee
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 persist.camera.privapp.list=org.codeaurora.snapcam
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
 # CNE
 persist.vendor.cne.feature=1
