@@ -182,7 +182,6 @@ persist.vendor.radio.report_codec=1
 persist.vendor.radio.sib16_support=1
 ro.com.android.dataroaming=false
 ro.telephony.default_network=20,20
-ro.telephony.block_binder_thread_on_incoming_calls=false
 
 # Radio - IMS
 persist.dbg.ims_volte_enable=1
