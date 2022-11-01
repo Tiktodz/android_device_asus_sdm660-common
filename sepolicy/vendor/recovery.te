@@ -14,7 +14,6 @@ allow recovery recovery:netlink_kobject_uevent_socket { bind  create };
 allow recovery seapp_contexts_file:file { getattr };
 allow recovery selinuxfs:file { write };
 allow recovery sepolicy_file:file { getattr };
-allow recovery sysfs:file { getattr  open  read  write };
 allow recovery system_data_file:dir { search };
 allow recovery tombstone_data_file:dir { getattr };
 allow recovery vfat:dir { add_name  write };
