@@ -328,4 +328,8 @@
 
     <!-- Gaming Mode FPSInfoService FPS node file path -->
     <string name="config_gamingmode_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_enableSmartPixels">true</bool>
+
 </resources>
