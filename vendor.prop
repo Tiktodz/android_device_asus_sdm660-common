@@ -259,5 +259,8 @@ ro.surface_flinger.set_idle_timer_ms=80
 # UBWC
 vendor.video.disable.ubwc=1
 
+# SF
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+
 # Zygote
 zygote.critical_window.minute=10
