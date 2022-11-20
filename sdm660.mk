@@ -450,7 +450,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
-    SystemUI
+    SystemUIGoogle
 
 # Sqlite
 PRODUCT_PACKAGES += \
