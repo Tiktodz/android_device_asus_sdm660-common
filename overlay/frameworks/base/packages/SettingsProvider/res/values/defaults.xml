@@ -33,4 +33,7 @@
     <!-- Enable vibrate for calls by default -->
     <bool name="def_vibrate_when_ringing">true</bool>
 
+    <!-- Turn off GPS as a default. -->
+    <bool name="def_location_providers_allowed">false</bool>
+
 </resources>
