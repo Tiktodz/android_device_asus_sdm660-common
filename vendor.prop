@@ -108,7 +108,6 @@ persist.vendor.camera.is_type=4
 persist.vendor.camera.mpo.disabled=1
 persist.vendor.camera.preview.ubwc=0
 persist.vendor.camera.HAL3.enabled=1
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.google.android.GoogleCamera,com.google.android.apps.cameralite
 persist.vendor.camera.perflock.enable=0
 camera.disable_zsl_mode=1
 
