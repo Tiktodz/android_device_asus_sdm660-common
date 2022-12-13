@@ -310,4 +310,10 @@
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">1.android.pool.ntp.org</string>
 
+    <!-- Minimum velocity to initiate a fling, as measured in dips per second. -->
+    <dimen name="config_viewMinFlingVelocity">75dp</dimen>
+
+    <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
+    <dimen name="config_viewMaxFlingVelocity">20000dp</dimen>
+
 </resources>

@@ -39,6 +39,11 @@ persist.vendor.dpm.feature=1
 persist.sys.fingerauto=1
 persist.sys.iscdfinger_998eas=1
 
+# Fling velocity
+persist.sys.scrollingcache=0
+ro.min.fling_velocity=75
+ro.max.fling_velocity=20000
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
