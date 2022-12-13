@@ -91,6 +91,7 @@ vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio.tunnel.encode=false
 vendor.voice.path.for.pcm.voip=false
+vendor.audio.gsl.shmem.dmaheap.uncached=true
 
 # Bluetooth
 bluetooth.hardware.power.operating_voltage_mv=3300
