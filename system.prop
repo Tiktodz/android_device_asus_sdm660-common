@@ -25,6 +25,11 @@ vendor.display.disable_inline_rotator=1
 vendor.display.disable_partial_split=1
 vendor.display.disable_skip_validate=1
 
+# Fling velocity
+persist.sys.scrollingcache=0
+ro.min.fling_velocity=60
+ro.max.fling_velocity=20000
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
