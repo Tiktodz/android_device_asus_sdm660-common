@@ -161,9 +161,6 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
-# SurfaceFlinger
-TARGET_USE_AOSP_SURFACEFLINGER := true
-
 # Treble
 BOARD_VNDK_VERSION := current
 
