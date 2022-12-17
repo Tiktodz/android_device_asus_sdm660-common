@@ -21,6 +21,9 @@ ro.vendor.use_data_netmgrd=true
 # Disable remote keyguard animation
 persist.wm.enable_remote_keyguard_animation=0
 
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
+
 # Display
 vendor.display.enable_default_color_mode=1
 vendor.gralloc.enable_fb_ubwc=1
