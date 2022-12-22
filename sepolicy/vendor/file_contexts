@@ -20,3 +20,6 @@
 /sys/devices/virtual/input/input[0-9]+/stk3x[0-9]x-proximity(/.*)?                u:object_r:sysfs_sensors:s0
 
 /sys/module/stk3x[0-9]x/parameters/call_status_flag                               u:object_r:sysfs_call_status:s0
+
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.X00TD                    u:object_r:hal_lineage_touch_default_exec:s0
