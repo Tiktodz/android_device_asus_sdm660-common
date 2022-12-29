@@ -52,6 +52,12 @@ persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
 sdm.debug.disable_skip_validate=1
 
+# Low-RAM optimizations
+ro.config.low_ram=true
+persist.sys.force_highendgfx=true
+dalvik.vm.jit.codecachesize=0
+config.disable_atlas=true
+
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
