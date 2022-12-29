@@ -2,6 +2,9 @@
 # system.prop for sdm660
 #
 
+# AutoSingleLayer mode settings
+debug.sf.auto_latch_unsignaled=true
+
 # Bluetooth
 bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
