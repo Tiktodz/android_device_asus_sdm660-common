@@ -194,3 +194,10 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      user root
      group system wakelock
      task_profiles ServiceCapacityLow
+
+on boot
+# Smart Charging permissions
+  chown system system /sys/class/power_supply/battery/charging_enabled
+  chown system system /sys/class/power_supply/battery/input_suspend
+  chmod 0666 /sys/class/power_supply/battery/charging_enabled
+  chmod 0666 /sys/class/power_supply/battery/input_suspend

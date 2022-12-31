@@ -4,3 +4,6 @@ get_prop(system_server, userspace_reboot_exported_prop)
 
 # Allow system_server to getpgid app_zygote
 allow system_server app_zygote:process getpgid;
+
+# Smart charging
+allow system_server sysfs_battery_supply:file rw_file_perms;
