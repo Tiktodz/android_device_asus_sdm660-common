@@ -1,0 +1,2 @@
+allow sensors sysfs:{ file dir } { read open };
+allow sensors diag_device:chr_file rw_file_perms;

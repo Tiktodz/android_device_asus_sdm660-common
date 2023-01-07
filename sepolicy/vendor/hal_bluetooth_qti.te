@@ -1,0 +1,2 @@
+allow hal_bluetooth_qti diag_device:chr_file rw_file_perms;
+allow hal_bluetooth_qti hal_bluetooth_qti:qipcrtr_socket { create };

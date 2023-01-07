@@ -1,0 +1,2 @@
+allow hal_wifi_supplicant self:capability sys_admin;
+allow hal_wifi_supplicant_default vendor_mutualex:unix_dgram_socket sendto;

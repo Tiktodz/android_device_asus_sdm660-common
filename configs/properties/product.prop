@@ -1,0 +1,2 @@
+# Always use GPU for screen compositing
+debug.sf.disable_hwc_overlays=1

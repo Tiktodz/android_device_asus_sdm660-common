@@ -1,0 +1,22 @@
+# Double tap to wake
+genfscon proc /tpd_gesture														u:object_r:proc_tpd_gesture:s0
+
+# LED
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d000/leds                 u:object_r:sysfs_graphics:s0
+
+# Power
+genfscon sysfs /devices/virtual/graphics/fb[0-9]                u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw             u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpubw             u:object_r:sysfs_devfreq:s0
+
+# Wakeup Nodes
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/active_count u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/active_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/event_count u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/expire_count u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/last_change_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/max_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/name u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/prevent_suspend_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/total_time_ms u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-9][0-9]/wakeup_count u:object_r:sysfs_wakeup:s0

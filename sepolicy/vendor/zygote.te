@@ -1,0 +1,2 @@
+get_prop(zygote, exported_camera_prop);
+allow zygote unlabeled:dir { search };

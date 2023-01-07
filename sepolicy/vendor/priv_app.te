@@ -1,0 +1,2 @@
+allow priv_app proc_version:file { getattr  open };
+allow priv_app hal_embmssl_hwservice:hwservice_manager find;

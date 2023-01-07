@@ -1,0 +1,15 @@
+dontaudit init bt_firmware_file:filesystem getattr;
+dontaudit init firmware_file:filesystem getattr;
+
+# Vibrator
+allow init sysfs_leds: file { rw_file_perms };
+
+allow init sysfs:file { setattr };
+allow init debugfs_tracing_debug:dir { mounton };
+allow init init:netlink_kobject_uevent_socket { bind  create  getopt  read  setopt };
+allow init init:qipcrtr_socket { create };
+allow init same_process_hal_file:file { execute };
+allow init sysfs_usb_supply:file { open  read };
+allow init system_server:binder { call };
+allow init untrusted_app:binder { transfer };
+allow init mediaserver:binder { transfer };

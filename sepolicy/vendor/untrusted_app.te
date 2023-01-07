@@ -1,0 +1,13 @@
+allow untrusted_app app_data_file:dir { getattr  search };
+allow untrusted_app app_data_file:file { execute };
+allow untrusted_app bt_firmware_file:dir { getattr };
+allow untrusted_app bt_firmware_file:filesystem { getattr };
+allow untrusted_app firmware_file:dir { getattr };
+allow untrusted_app firmware_file:filesystem { getattr };
+allow untrusted_app pmsg_device:chr_file { getattr };
+allow untrusted_app proc_net:file { read };
+allow untrusted_app proc_pid_max:file { read };
+allow untrusted_app proc_zoneinfo:file { read };
+allow untrusted_app rootfs:dir { read };
+allow untrusted_app sysfs_net:dir { search };
+allow untrusted_app untrusted_app:fifo_file { ioctl };

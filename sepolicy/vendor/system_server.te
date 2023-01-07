@@ -1,0 +1,12 @@
+allow system_server app_zygote:process getpgid;
+
+get_prop(system_server, exported_camera_prop);
+get_prop(system_server, userspace_reboot_config_prop)
+get_prop(system_server, userspace_reboot_exported_prop)
+get_prop(system_server, vendor_persist_camera_prop)
+allow system_server unlabeled:dir { write setattr };
+allow system_server userspace_reboot_exported_prop:file { read };
+allow system_server exported_camera_prop:file { read };
+allow system_server sysfs:file { getattr };
+allow system_server vendor_display_notch_prop:file { getattr  map  open  read };
+allow system_server crash_dump:process { getpgid };

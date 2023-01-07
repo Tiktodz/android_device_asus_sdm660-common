@@ -1,0 +1,16 @@
+//
+// Copyright (C) 2021 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "lights.qcom",
+    srcs: ["lights.c"],
+    relative_install_path: "hw",
+    shared_libs: ["liblog"],
+    header_libs: ["libhardware_headers"],
+    cflags: ["-DLOG_TAG=\"qdlights\""],
+    clang: true,
+    vendor: true,
+}

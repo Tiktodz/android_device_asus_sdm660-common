@@ -1,0 +1,3 @@
+type focaltech_hwservice, hwservice_manager_type;
+type nxpese_hwservice, hwservice_manager_type;
+type hal_embmssl_hwservice, hwservice_manager_type;

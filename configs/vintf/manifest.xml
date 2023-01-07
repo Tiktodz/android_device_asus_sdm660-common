@@ -1,0 +1,401 @@
+<!-- Copyright (c) 2017, 2019-2021 The Linux Foundation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+    * Neither the name of The Linux Foundation nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<manifest version="1.0" type="device" target-level="4">
+    <kernel target-level="4"/>
+    <!-- AUDIO -->
+    <hal format="hidl">
+        <name>android.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <fqname>@6.0::IDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.audio.effect</name>
+        <transport>hwbinder</transport>
+        <fqname>@6.0::IEffectsFactory/default</fqname>
+    </hal>
+    <!-- MEDIA -->
+    <hal format="hidl">
+        <name>android.hardware.media.omx</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IOmx/default</fqname>
+        <fqname>@1.0::IOmxStore/default</fqname>
+    </hal>
+    <!-- CAPABILIITY CONFIGSTORE HAL SERVICE  -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.capabilityconfigstore</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::ICapabilityConfigStore/default</fqname>
+    </hal>
+    <!-- GRAPHICS -->
+    <hal format="hidl">
+        <name>android.hardware.graphics.composer</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IComposer/default</fqname>
+    </hal>
+    <!-- DISPLAY -->
+    <hal format="hidl">
+        <name>vendor.display.config</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::IDisplayConfig/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.display.color</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IDisplayColor/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.display.postproc</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IDisplayPostproc/default</fqname>
+    </hal>
+    <!-- MEMTRACK -->
+    <hal format="hidl">
+        <name>android.hardware.memtrack</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IMemtrack/default</fqname>
+    </hal>
+    <!-- SENSORS -->
+    <hal format="hidl">
+        <name>android.hardware.sensors</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ISensors/default</fqname>
+    </hal>
+    <!-- CAMERA PROVIDER -->
+    <hal format="hidl">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.4::ICameraProvider/legacy/0</fqname>
+    </hal>
+    <!-- BLUETOOTH -->
+    <hal format="hidl">
+        <name>android.hardware.bluetooth</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IBluetoothHci/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.bluetooth_audio</name>
+        <transport>hwbinder</transport>
+	<fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <!-- BTCONFIGSTORE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.btconfigstore</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::IBTConfigStore/default</fqname>
+    </hal>
+    <!-- ANT -->
+    <hal format="hidl">
+        <name>com.dsi.ant</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IAnt/default</fqname>
+    </hal>
+    <!-- RADIO -->
+    <hal format="hidl">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
+        <fqname>@1.2::ISap/slot1</fqname>
+        <fqname>@1.2::ISap/slot2</fqname>
+    </hal>
+    <!-- RADIO CONFIG -->
+    <hal format="hidl">
+        <name>android.hardware.radio.config</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IRadioConfig/default</fqname>
+    </hal>
+    <!-- RIL UIM REMOTE CLIENT -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.uim_remote_client</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient0</fqname>
+        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient1</fqname>
+    </hal>
+    <!-- RIL UIM REMOTE SERVER -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.uim_remote_server</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
+	<fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
+    </hal>
+    <!-- DATA LINK LATENCY -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.latency</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ILinkLatency/default</fqname>
+    </hal>
+    <!-- RIL UIM LPA -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.lpa</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IUimLpa/UimLpa0</fqname>
+        <fqname>@1.1::IUimLpa/UimLpa1</fqname>
+    </hal>
+    <!-- RIL UIM -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.uim</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IUim/Uim0</fqname>
+        <fqname>@1.2::IUim/Uim1</fqname>
+    </hal>
+    <!-- RIL AUDIO HAL -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.am</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IQcRilAudio/slot1</fqname>
+        <fqname>@1.0::IQcRilAudio/slot2</fqname>
+    </hal>
+    <!-- DPM QMI SERVICE -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.dpm.api</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
+    </hal>
+    <!-- IRTP SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.imsrtpservice</name>
+        <transport>hwbinder</transport>
+        <fqname>@3.0::IRTPService/imsrtpservice</fqname>
+    </hal>
+    <!-- QTI RADIO -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IQtiRadio/slot1</fqname>
+        <fqname>@1.0::IQtiRadio/slot2</fqname>
+        <fqname>@2.4::IQtiRadio/slot1</fqname>
+        <fqname>@2.4::IQtiRadio/slot2</fqname>
+    </hal>
+    <!-- FM -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.fm</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IFmHci/default</fqname>
+    </hal>
+    <!-- KEYMASTER -->
+    <hal format="hidl">
+        <name>android.hardware.keymaster</name>
+	<transport>hwbinder</transport> 
+        <fqname>@3.0::IKeymasterDevice/default</fqname>
+    </hal>
+    <!-- GATEKEEPER -->
+    <hal format="hidl">
+        <name>android.hardware.gatekeeper</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IGatekeeper/default</fqname>
+    </hal>
+    <!-- IMS RADIO -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.ims</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.6::IImsRadio/imsradio0</fqname>
+        <fqname>@1.6::IImsRadio/imsradio1</fqname>
+    </hal>
+    <!-- QCRILHOOK -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qcrilhook</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
+        <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
+    </hal>
+    <!-- ALARM HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.alarm</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IAlarm/default</fqname>
+    </hal>
+    <!-- IMS UCE SERVICE -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.uceservice</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.2::IUceService/com.qualcomm.qti.uceservice</fqname>
+    </hal>
+    <!-- IMS CALLINFO SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.ims.callinfo</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IService/default</fqname>
+    </hal>
+    <!-- IMS CM SERVICE -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+	<fqname>@2.2::IImsCmService/qti.ims.connectionmanagerservice</fqname>
+    </hal>
+    <!-- IMS FACTORY -->
+    <hal format="hidl">
+        <name>vendor.qti.ims.factory</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IImsFactory/default</fqname>
+    </hal>
+    <!-- QTI DATA FACTORY -->
+    <hal format="hidl">
+        <name>vendor.qti.data.factory</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.2::IFactory/default</fqname>
+    </hal>
+    <!-- DSP SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.dsp</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IDspService/dspservice</fqname>
+    </hal>
+    <!-- DATA CONNECTION -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.connection</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IDataConnection/slot1</fqname>
+        <fqname>@1.1::IDataConnection/slot2</fqname>
+    </hal>
+    <!-- CACERT -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.cacert</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IService/default</fqname>
+    </hal>
+    <!-- ESE POWERMANAGER -->
+    <hal format="hidl">
+        <name>vendor.qti.esepowermanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IEsePowerManager/default</fqname>
+    </hal>
+    <!-- QSEECOM HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qseecom</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IQSEECom/default</fqname>
+    </hal>
+    <!-- QTEECONNECTOR HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qteeconnector</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IAppConnector/default</fqname>
+	<fqname>@1.0::IGPAppConnector/default</fqname>
+    </hal>
+    <!-- TUI COMMUNICATOR SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.tui_comm</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::ITuiComm/default</fqname>
+    </hal>
+    <!-- Servicetracker -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.servicetracker</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.2::IServicetracker/default</fqname>
+    </hal>
+    <!-- SOTER SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.soter</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::ISoter/default</fqname>
+    </hal>
+    <!-- TETHER OFFLOAD -->
+    <hal format="hidl">
+        <name>android.hardware.tetheroffload.config</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IOffloadConfig/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.tetheroffload.control</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IOffloadControl/default</fqname>
+    </hal>
+    <!-- WIFISTATS HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wifi.wifilearner</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IWifiStats/wifiStats</fqname>
+    </hal>
+    <!-- CRYPTFSHW HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.cryptfshw</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::ICryptfsHw/default</fqname>
+    </hal>
+    <!-- BLUETOOTHSAR SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.bluetooth_sar</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.1::IBluetoothSar/default</fqname>
+    </hal>
+    <!-- QCC HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qccvndhal</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IQccvndhal/qccvndhal</fqname>
+    </hal>
+    <!-- LIGHT HAL SERVICE -->
+    <hal format="hidl">
+        <name>android.hardware.light</name>
+        <transport>hwbinder</transport>
+	<fqname>@2.0::ILight/default</fqname>
+    </hal>
+    <!-- EMBMS HAL SERVICE -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.1::IEmbms/embmsslServer0</fqname>
+    </hal>
+    <!-- target-level="3" manifest entries here -->
+    <!-- CONFIGSTORE -->
+    <hal format="hidl">
+        <name>android.hardware.configstore</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
+    </hal>
+    <!-- Misc - Specific to Hals/versions used in this tree
+         i.e: Different from CAF -->
+    <!-- GNSS -->
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IGnss/default</fqname>
+        <fqname>@1.0::IGnss/gnss_vendor</fqname>
+        <fqname>@2.0::IGnss/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ILocHidlGnss/gnss_vendor</fqname>
+        <fqname>@2.0::ILocHidlGnss/gnss_vendor</fqname>
+    </hal>
+    <!-- BIOMETRICS --> 
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+	<fqname>@2.1::IBiometricsFingerprint/default</fqname>
+    </hal>
+    <!-- IWLAN -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.iwlan</name>
+        <transport>hwbinder</transport>
+	<fqname>@1.0::IIWlan/slot1</fqname>
+	<fqname>@1.0::IIWlan/slot2</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,4 @@
+allow qti_init_shell vendor_radio_data_file:dir rw_dir_perms;
+allow qti_init_shell vendor_radio_data_file:file create_file_perms;
+allow qti_init_shell sysfs:file { write };
+dontaudit qti_init_shell self:capability { dac_override dac_read_search };
