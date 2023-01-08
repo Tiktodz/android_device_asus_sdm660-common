@@ -71,6 +71,16 @@ on init
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
+    # Create folder for mm-qcamera-daemon
+    mkdir /data/vendor/camera 0777 camera camera
+
+    chmod 0777 /data/vendor
+    chmod 0777 /data/vendor/camera
+    chmod 0777 /data/vendor/camera/wide_1600x1200.nv21
+    chmod 0777 /data/vendor/camera/tele_4160x3120.nv21
+    symlink /mnt/vendor/persist/dualcali_dump.bin /data/vendor/camera/dualcali_dump.bin
+    chown system system /data/vendor/camera/dualcali_dump.bin
+
     # Change permissions for /dev/diag
     chmod 0666 /dev/diag
 
