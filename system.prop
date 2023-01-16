@@ -34,6 +34,7 @@ vendor.display.disable_skip_validate=1
 debug.sf.disable_client_composition_cache=1
 debug.sdm.support_writeback=0
 ro.surface_flinger.protected_contents=true
+debug.sf.enable_transaction_tracing=false
 
 # DPM
 persist.vendor.dpm.feature=1
