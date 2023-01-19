@@ -350,13 +350,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # Powerhint
-ifeq ($(EAS_POWERHINT_VARIANT), sdm636)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power-libperfmgr/sdm636_powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-else
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power-libperfmgr/sdm660_powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-endif
+    $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Powerhint
 PRODUCT_COPY_FILES += \
