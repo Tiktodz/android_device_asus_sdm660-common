@@ -79,7 +79,6 @@ vendor.audio.gsl.shmem.dmaheap.uncached=true
 
 # Bluetooth
 bluetooth.hardware.power.operating_voltage_mv=3300
-persist.vendor.service.bdroid.sibs=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.scram.enabled=true
