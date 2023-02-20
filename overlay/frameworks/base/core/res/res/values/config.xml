@@ -324,12 +324,6 @@
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">1.android.pool.ntp.org</string>
 
-    <!-- Minimum velocity to initiate a fling, as measured in dips per second. -->
-    <dimen name="config_viewMinFlingVelocity">70dp</dimen>
-
-    <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
-    <dimen name="config_viewMaxFlingVelocity">21000dp</dimen>
-
     <!-- Determines whether the shell features all run on another thread. -->
     <bool name="config_enableShellMainThread">true</bool>
 
