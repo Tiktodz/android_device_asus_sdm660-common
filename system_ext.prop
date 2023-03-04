@@ -22,3 +22,7 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 # Telephony
 ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
+
+# Telephony
+# Disable handling audio direction changes on IMS calls.
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
