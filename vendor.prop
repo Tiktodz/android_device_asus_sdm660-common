@@ -171,6 +171,7 @@ ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
 
 # Graphics
 debug.sdm.support_writeback=0
+debug.sf.treat_170m_as_sRGB=1
 ro.hwui.render_ahead=2
 
 # IWLAN
