@@ -140,6 +140,10 @@ BOARD_VNDK_VERSION := current
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-12-05
 
+# Verity
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
