@@ -40,6 +40,9 @@ on init
 
     write /sys/devices/virtual/graphics/fb0/idle_time 100
 
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
