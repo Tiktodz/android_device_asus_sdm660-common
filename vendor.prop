@@ -80,6 +80,8 @@ vendor.audio.gsl.shmem.dmaheap.uncached=true
 # Bluetooth
 bluetooth.hardware.power.operating_voltage_mv=3300
 persist.vendor.bt.aac_frm_ctl.enabled=true
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.scram.enabled=true
 vendor.qcom.bluetooth.soc=cherokee
