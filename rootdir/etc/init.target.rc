@@ -77,6 +77,7 @@ on boot
 
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+    insmod /vendor/lib/modules/wlan.ko
 
     #USB controller configuration
     setprop vendor.usb.rndis.func.name "rndis_bam"
