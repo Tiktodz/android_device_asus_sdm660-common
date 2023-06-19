@@ -301,6 +301,7 @@ vendor/lib64/liblbs_core.so|c4715331c44968ebe1195c1128a60260db045b94
 vendor/lib64/liblocationservice.so|138238cf930ce8843d81df7b554364c3aa6f7412
 vendor/lib64/liblocationservice_glue.so|95f05d44ea815d85e8f0e024dd8e7b045813d488
 vendor/lib64/libloc_api_v02.so|2b2e8cda6bdf0344a625af3e8a33ef0a60b1801e
+vendor/lib64/liblocdiagiface.so
 vendor/lib64/libloc_socket.so|ac64caebca6b881447dbde00f5b539b05069f602
 vendor/lib64/liblowi_client.so|5eac232760999dd3338969f4c4255dd4d06ba440
 vendor/lib64/liblowi_wifihal.so|896c6e1cd25ddecb3f1f23391067badab1ddfe75
