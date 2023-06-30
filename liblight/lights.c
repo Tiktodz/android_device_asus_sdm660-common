@@ -167,6 +167,10 @@ set_speaker_light_locked(struct light_device_t* dev,
         return -1;
     }
 
+    // Disable LED's
+    write_int(RED_LED_FILE, 0);
+    write_int(GREEN_LED_FILE, 0);
+
     switch (state->flashMode) {
         case LIGHT_FLASH_TIMED:
             onMS = state->flashOnMS;
@@ -188,6 +192,10 @@ set_speaker_light_locked(struct light_device_t* dev,
 
     red = (colorRGB >> 16) & 0xFF;
     green = (colorRGB >> 8) & 0xFF;
+
+    // Avoid orange color
+    if(red == 0xFF)
+       green = 0;
 
    if (onMS != 0 && offMS != 0)
         breath = 1;
@@ -250,6 +258,16 @@ set_light_attention(struct light_device_t* dev,
     return 0;
 }
 
+static int
+set_light_buttons(struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    // Dummy function to silence Light not supported error
+    (void)state;
+    (void)dev;
+    return 0;
+}
+
 /** Close the lights device */
 static int
 close_lights(struct light_device_t *dev)
@@ -280,6 +298,10 @@ static int open_lights(const struct hw_module_t* module, char const* name,
         set_light = set_light_battery;
     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
         set_light = set_light_notifications;
+    else if (0 == strcmp(LIGHT_ID_BUTTONS, name)) {
+          // set dummy button light
+          set_light = set_light_buttons;
+    }
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name))
         set_light = set_light_attention;
     else
