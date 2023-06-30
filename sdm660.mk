@@ -81,6 +81,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.6 \
     vendor.qti.hardware.camera.device@1.0
 
 # Cgroup and task_profiles
@@ -336,6 +337,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
 PRODUCT_COPY_FILES += \
@@ -353,8 +355,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librmnetctl \
-    android.hardware.radio@1.6.vendor \
-    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.2 \
