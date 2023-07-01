@@ -490,10 +490,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.asus_sdm660
 
-# TouchGestures
-PRODUCT_PACKAGES += \
-    TouchGestures
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.asus_sdm660
