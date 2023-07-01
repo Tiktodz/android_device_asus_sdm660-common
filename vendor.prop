@@ -1,5 +1,6 @@
 # Audio
 af.fast_track_multiplier=1
+af.resampler.quality=255
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
