@@ -2,6 +2,9 @@
 # system.prop for sdm660
 #
 
+# Audio resampler
+af.resampler.quality=255
+
 # Bluetooth
 bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
