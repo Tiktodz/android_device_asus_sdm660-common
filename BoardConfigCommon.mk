@@ -35,6 +35,9 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Camera
+BOARD_QTI_CAMERA_32BIT_ONLY := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 TARGET_USES_GRALLOC1 := true
