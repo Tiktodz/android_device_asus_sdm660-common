@@ -103,16 +103,12 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TA_uClampBoost",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+      "Name": "TASchedtuneBoost",
+      "Path": "/dev/stune/top-app/schedtune.boost",
       "Values": [
-     "0",
-     "10",
-     "25",
-     "35",
-     "max"
+        "15",
+        "10"
       ],
-      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -208,15 +204,15 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUBWHystTriggerCount",
+      "Node": "TASchedtuneBoost",
       "Duration": 0,
-      "Value": "0"
+      "Value": "15"
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "TA_uClampBoost",
+      "Node": "CPUBWHystTriggerCount",
       "Duration": 0,
-      "Value": "35"
+      "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
@@ -247,12 +243,6 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 5000,
       "Value": "1612800"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TA_uClampBoost",
-      "Duration": 1500,
-      "Value": "25"
     },
     {
       "PowerHint": "LAUNCH",
