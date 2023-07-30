@@ -128,6 +128,10 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-recv-passive-client stream 0666 system system
    socket thermal-send-rule stream 0660 system system
    group root
+   disabled
+
+on property:sys.boot_completed=1
+   start thermal-engine
 
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
      class core
