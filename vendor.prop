@@ -152,7 +152,6 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 vendor.display.enable_force_split=1
 vendor.gralloc.disable_ahardware_buffer=1
-ro.hwui.render_ahead=20
 
 # IWLAN
 persist.data.iwlan.enable=true
