@@ -115,13 +115,12 @@ dalvik.vm.heapmaxfree=8m
 
 # Display
 debug.sf.enable_hwc_vds=1
-debug.sf.enable_gl_backpressure=1
 debug.sf.hw=1
 debug.sf.recomputecrop=0
 persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196610
 vendor.display.disable_rotator_downscale=1
-vendor.display.disable_scaler=0
+vendor.display.disable_scaler=1
 
 # DPM
 persist.vendor.dpm.loglevel=0
@@ -150,8 +149,6 @@ rs.gpu.rsIntrinsic=0
 # Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
-vendor.display.enable_force_split=1
-vendor.gralloc.disable_ahardware_buffer=1
 
 # IWLAN
 persist.data.iwlan.enable=true
@@ -171,7 +168,6 @@ pm.sleep_mode=1
 # Radio
 persist.radio.multisim.config=dsds
 persist.sys.fflag.override.settings_provider_model=false
-persist.sys.fflag.override.settings_network_and_internet_v2=true
 persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.aosp_usr_pref_sel=true
 persist.vendor.radio.add_power_save=1
@@ -225,9 +221,6 @@ ro.surface_flinger.set_idle_timer_ms=80
 
 # UBWC
 vendor.video.disable.ubwc=1
-
-# Watchdog
-ro.hw_timeout_multiplier=3
 
 # Zygote
 zygote.critical_window.minute=10
