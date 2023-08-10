@@ -175,7 +175,6 @@
         <item>"/system/bin/libsurfaceflinger"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
     </string-array>
 
     <!-- Should the pinner service pin the Home application? -->
