@@ -172,7 +172,7 @@
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
-        <item>"/system/bin/libsurfaceflinger"</item>
+        <item>"/system/bin/surfaceflinger"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
     </string-array>
