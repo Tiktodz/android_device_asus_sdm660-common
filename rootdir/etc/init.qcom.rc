@@ -397,6 +397,8 @@ on property:sys.boot_completed=1
     write /sys/devices/virtual/cvp/cvp/boot 1
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.qcom
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
 
 # Reset Leds (on boot)
     write /sys/class/leds/green/brightness 1
