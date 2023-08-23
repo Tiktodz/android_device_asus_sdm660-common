@@ -1,2 +1,5 @@
+# Enable EGL image tracking on SF for b/137514000
+debug.sf.enable_egl_image_tracker=1
+
 # IMS
 ro.telephony.block_binder_thread_on_incoming_calls=false
