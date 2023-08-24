@@ -354,18 +354,6 @@ on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
     restart vendor.audio-hal-2-0
 
-service thermal-engine /vendor/bin/thermal-engine
-    class main
-    user root
-    group root
-    socket thermal-send-client stream 0660 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0660 system system
-    socket thermal-send-rule stream 0660 system system
-
-on property:sys.boot_completed=1
-	restart thermal-engine
-
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
     user vendor_qrtr
