@@ -404,7 +404,4 @@
     <!-- Exempt ImsService from privacy (location) indicators -->
     <string name="config_systemAudioIntelligence" translatable="false">org.codeaurora.ims</string>
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
-
-    <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
-    <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
 </resources>
