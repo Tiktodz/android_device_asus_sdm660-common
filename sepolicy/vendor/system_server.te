@@ -7,5 +7,3 @@ allow system_server app_zygote:process getpgid;
 
 # Smart charging
 allow system_server sysfs_battery_supply:file rw_file_perms;
-
-dontaudit system_server sysfs:file { read open getattr };
