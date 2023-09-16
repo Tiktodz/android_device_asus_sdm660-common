@@ -7,8 +7,13 @@
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service_asus      u:object_r:hal_fingerprint_default_exec:s0
 
+<<<<<<< HEAD
 # FPS Info
 /sys/devices/virtual/graphics/fb0/measured_fps                              u:object_r:sysfs_fps:s0
+=======
+# Firmware
+/firmware                                                                     u:object_r:firmware_file:s0
+>>>>>>> 3e123b6 (sdm660-common: Add symlinks for firmware and dsp)
 
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
