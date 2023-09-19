@@ -68,10 +68,6 @@ ro.nfc.port=I2C
 # NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
 
-# Perf
-ro.vendor.qti.sys.fw.bg_apps_limit=38
-vendor.perf.gestureflingboost.enable=true
-
 # Pre-Rendering
 ro.vendor.perf.scroll_opt=true
 

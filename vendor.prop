@@ -144,13 +144,6 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
 
-# The default sf phase offset is set to 6ms, to avoid it be included into next
-# vsync threshold, set high fps early sf and next vsync threshold phase offset
-# to 6.1ms, which is bigger than all sf phase offsets in normal frame rate.
-debug.sf.high_fps_early_phase_offset_ns=6100000
-debug.sf.high_fps_early_gl_phase_offset_ns=9000000
-debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
-
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
 
@@ -182,14 +175,6 @@ persist.vendor.ims.disableADBLogs=1
 persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
-
-# Rendering
-debug.enable.sglscale=1
-debug.egl.hw=1
-debug.sf.disable_hwc=0
-debug.sf.recomputecrop=0
-persist.hwc.ptor.enable=true
-debug.sf.gpu_comp_tiling=1
 
 # Sensors
 ro.vendor.sdk.sensors.gestures=false
