@@ -181,6 +181,20 @@ persist.data.iwlan.enable=true
 persist.vendor.data.iwlan.enable=true
 ro.telephony.iwlan_operation_mode=legacy
 
+# Logs
+persist.log.tag.AnalyticsService=S
+persist.log.tag.KernelCpuUidActiveTimeReader=S
+persist.log.tag.Tracer=S
+persist.log.tag.NearbySharing=S
+persist.log.tag.IntervalStats=S
+persist.log.tag.CompatibilityChangeReporter=S
+persist.log.tag.SQLiteLog=S
+persist.log.tag.wificond=S
+persist.log.tag.b/223498680=S
+persist.log.tag.TrafficStats=S
+persist.log.tag.ContrastColorUtil=S
+persist.log.tag.OpenGLRenderer=S
+
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
 
