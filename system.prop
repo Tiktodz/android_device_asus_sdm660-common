@@ -40,6 +40,10 @@ persist.vendor.dpm.feature=1
 persist.sys.fingerauto=1
 persist.sys.iscdfinger_998eas=1
 
+# Fling
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
@@ -81,9 +85,6 @@ ro.nfc.port=I2C
 # NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
 
-# Pre-Rendering
-ro.vendor.perf.scroll_opt=true
-
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
@@ -113,3 +114,6 @@ sys.fflag.override.settings_seamless_transfer=true
 # WiFi Display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
