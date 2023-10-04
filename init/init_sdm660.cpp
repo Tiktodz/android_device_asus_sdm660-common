@@ -139,6 +139,6 @@ void vendor_load_properties()
     set_avoid_gfxaccel_config();
     NFC_check();
     workaround_snet_properties();
-    set_build_fingerprint("google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
-    set_build_description("walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys");
+    set_build_fingerprint("google/redfin/redfin:13/TQ3A.230805.001.A2/10385117:user/release-keys");
+    set_build_description("redfin-user 13 TQ3A.230805.001.A2 10385117 release-keys");
 }
