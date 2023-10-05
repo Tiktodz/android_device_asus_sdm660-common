@@ -139,6 +139,6 @@ void vendor_load_properties()
     set_avoid_gfxaccel_config();
     NFC_check();
     workaround_snet_properties();
-    set_build_fingerprint("google/redfin/redfin:13/TQ3A.230805.001.A2/10385117:user/release-keys");
-    set_build_description("redfin-user 13 TQ3A.230805.001.A2 10385117 release-keys");
+    set_build_fingerprint("google/redfin/redfin:13/TQ3A.230901.001/10750268:user/release-keys");
+    set_build_description("redfin-user 13 TQ3A.230901.001 10750268 release-keys");
 }
