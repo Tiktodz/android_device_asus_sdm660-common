@@ -115,10 +115,10 @@ dalvik.vm.heapmaxfree=8m
 debug.hwui.use_buffer_age=false
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
-debug.sf.recomputecrop=0
 persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196610
 vendor.display.disable_rotator_downscale=1
+vendor.display.perf_hint_window=50
 
 # DRM
 drm.service.enabled=true
@@ -142,7 +142,9 @@ debug.sf.early_gl_phase_offset_ns=3000000
 debug.sf.early_gl_app_phase_offset_ns=15000000
 
 # Memory optimizations
-ro.vendor.qti.sys.fw.bservice_enable=true
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+ro.config.dha_tunnable=1
 
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org

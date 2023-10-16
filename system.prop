@@ -31,12 +31,8 @@ debug.cpurend.vsync=false
 # Display
 vendor.display.enable_default_color_mode=1
 vendor.gralloc.enable_fb_ubwc=1
-vendor.display.disable_inline_rotator=1
 vendor.display.disable_partial_split=1
 vendor.display.disable_skip_validate=1
-
-# Enable EGL image tracking on SF for b/137514000
-debug.sf.enable_egl_image_tracker=1
 
 # Fingerprint
 persist.sys.fingerauto=1
@@ -46,12 +42,13 @@ persist.sys.iscdfinger_998eas=1
 persist.vendor.overlay.izat.optin=rro
 
 # Graphics
+debug.sf.disable_backpressure=1
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
 sdm.debug.disable_skip_validate=1
 
-#hwui properties
+# HWUI properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
 ro.hwui.r_buffer_cache_size=8
@@ -81,9 +78,6 @@ ro.nfc.port=I2C
 # NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
 
-# Pre-Rendering
-ro.vendor.perf.scroll_opt=true
-
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
@@ -93,6 +87,9 @@ persist.radio.VT_CAM_INTERFACE=2
 persist.sys.fflag.override.settings_network_and_internet_v2=true
 ril.subscription.types=NV,RUIM
 telephony.lteOnCdmaDevice=1
+
+# Support USB OTG
+rp.usb_host=1
 
 # Time
 persist.timed.enable=true
