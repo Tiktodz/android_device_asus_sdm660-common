@@ -82,9 +82,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
+    WITH_DEXPREOPT := true
   endif
 endif
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # FM
 BOARD_HAS_QCA_FM_SOC := cherokee
