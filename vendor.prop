@@ -141,11 +141,6 @@ debug.sf.early_app_phase_offset_ns=1500000
 debug.sf.early_gl_phase_offset_ns=3000000
 debug.sf.early_gl_app_phase_offset_ns=15000000
 
-# Memory optimizations
-persist.service.lgospd.enable=0
-persist.service.pcsync.enable=0
-ro.config.dha_tunnable=1
-
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
 
