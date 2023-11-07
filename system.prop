@@ -42,11 +42,11 @@ persist.sys.iscdfinger_998eas=1
 # Fling
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
 # Graphics
-debug.cpurend.vsync=false
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1
 dev.pm.dyn_samplingrate=1
