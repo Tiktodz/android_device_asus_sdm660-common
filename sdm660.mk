@@ -358,7 +358,7 @@ PRODUCT_COPY_FILES += \
 
 # QNS
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    libstdc++_vendor
 
 # QTI Performance
 PRODUCT_COPY_FILES += \
