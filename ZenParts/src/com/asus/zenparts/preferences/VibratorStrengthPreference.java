@@ -12,98 +12,81 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
+* along with this program. If not, see <http://www.gnu.com/licenses/>.
 *
 */
 package com.asus.zenparts.preferences;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.database.ContentObserver;
-import android.util.AttributeSet;
-import android.view.View;
-import android.widget.SeekBar;
-import android.widget.Button;
-import android.os.Bundle;
-import android.util.Log;
 import android.os.Vibrator;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceViewHolder;
+import android.util.AttributeSet;
+import com.asus.zenparts.Utils;
+import com.asus.zenparts.DeviceSettings;
+import com.asus.zenparts.BootReceiver;
 
-import com.asus.zenparts.R;
-import com.asus.zenparts.*;
+import java.util.List;
 
-public class VibratorStrengthPreference extends Preference implements
-        SeekBar.OnSeekBarChangeListener {
+public class VibratorStrengthPreference extends CustomSeekBarPreference {
 
-    private SeekBar mSeekBar;
-    private int mOldStrength;
-    private int mMinValue;
-    private int mMaxValue;
+    // from drivers/platform/msm/qpnp-haptic.c
+    // #define QPNP_HAP_VMAX_MIN_MV		116
+    // #define QPNP_HAP_VMAX_MAX_MV		3596
+    private static int mMinVal = 116;
+    private static int mMaxVal = 3596;
+    private static int mDefVal = mMaxVal - (mMaxVal - mMinVal) / 4;
     private Vibrator mVibrator;
 
-    private static final String FILE_LEVEL = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-01/800f000.qcom,spmi:qcom.pm660@1:qcom,haptics@c000/leds/vibrator/vmax_mv_user";
+    private static final String FILE_LEVEL = "/sys/class/timed_output/vibrator/vtg_level";
     private static final long testVibrationPattern[] = {0,250};
 
     public VibratorStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        // from drivers/platform/msm/qpnp-haptic.c
-        // #define QPNP_HAP_VMAX_MIN_MV		116
-        // #define QPNP_HAP_VMAX_MAX_MV		3596
-        mMinValue = 116;
-        mMaxValue = 2088;
+
+        mInterval = 10;
+        mShowSign = false;
+        mUnits = "";
+        mContinuousUpdates = false;
+        mMinValue = mMinVal;
+        mMaxValue = mMaxVal;
+        mDefaultValueExists = true;
+        mDefaultValue = mDefVal;
+        mValue = Integer.parseInt(loadValue());
+
+        setPersistent(false);
 
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        setLayoutResource(R.layout.preference_seek_bar);
-    }
-
-    @Override
-    public void onBindViewHolder(PreferenceViewHolder holder) {
-        super.onBindViewHolder(holder);
-
-        mOldStrength = Integer.parseInt(getValue(getContext()));
-        mSeekBar = (SeekBar) holder.findViewById(R.id.seekbar);
-        mSeekBar.setMax(mMaxValue - mMinValue);
-        mSeekBar.setProgress(mOldStrength - mMinValue);
-        mSeekBar.setOnSeekBarChangeListener(this);
     }
 
     public static boolean isSupported() {
         return Utils.fileWritable(FILE_LEVEL);
     }
 
-	public static String getValue(Context context) {
-		return Utils.getFileValue(FILE_LEVEL, "2088");
-	}
-
-	private void setValue(String newValue, boolean withFeedback) {
-	    Utils.writeValue(FILE_LEVEL, newValue);
-        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-        editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
-        editor.commit();
-	}
-
     public static void restore(Context context) {
         if (!isSupported()) {
             return;
         }
 
-        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_VIBSTRENGTH, "2088");
+        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_VIBSTRENGTH, String.valueOf(mDefVal));
         Utils.writeValue(FILE_LEVEL, storedValue);
     }
 
-    public void onProgressChanged(SeekBar seekBar, int progress,
-            boolean fromTouch) {
-        setValue(String.valueOf(progress + mMinValue), true);
+    public static String loadValue() {
+        return Utils.getFileValue(FILE_LEVEL, String.valueOf(mDefVal));
     }
 
-    public void onStartTrackingTouch(SeekBar seekBar) {
-        // NA
+    private void saveValue(String newValue) {
+        Utils.writeValue(FILE_LEVEL, newValue);
+        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
+        editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
+        editor.apply();
+        mVibrator.vibrate(testVibrationPattern, -1);
     }
 
-    public void onStopTrackingTouch(SeekBar seekBar) {
-        // NA
+    @Override
+    protected void changeValue(int newValue) {
+        saveValue(String.valueOf(newValue));
     }
 }
