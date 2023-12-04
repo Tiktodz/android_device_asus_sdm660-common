@@ -9,6 +9,3 @@ allow init su:process { noatsecure  rlimitinh  siginh  transition };
 allow init sysfs_fcharge:file { write open };
 
 allow init vendor_file:file { execute execute_no_trans };
-
-# Vibrator
-allow init sysfs_leds: file { open };
