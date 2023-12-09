@@ -65,6 +65,11 @@ function blob_fixup() {
         "${PATCHELF}" --add-needed "libshim_wfd.so" "${2}"
         ;;
 
+        # Use VNDK 29 protobuf
+        vendor/lib64/libwvhidl.so)
+        "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
+        ;;
+
     esac
 }
 
