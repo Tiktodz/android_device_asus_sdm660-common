@@ -32,7 +32,7 @@ persist.sys.fuse.passthrough.enable=true
 persist.vendor.overlay.izat.optin=rro
 
 # Graphics
-debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 sdm.debug.disable_skip_validate=1
