@@ -39,8 +39,8 @@ on boot
 
 on boot
     # Tap to wake node
-    chown system system /sys/kernel/touchpanel/dclicknode
-    chmod 0660 /sys/kernel/touchpanel/dclicknode
+    chown system system /proc/tpd_gesture
+    chmod 0660 /proc/tpd_gesture
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     override

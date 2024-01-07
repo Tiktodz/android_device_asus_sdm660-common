@@ -1,7 +1,5 @@
 type cdfinger_data_file, core_data_file_type, data_file_type, file_type;
 type public_adsprpcd_file, file_type;
-type sysfs_touchpanel, sysfs_type, fs_type;
-type sysfs_dclicknode, sysfs_type, fs_type;
-type sysfs_gesture_node, sysfs_type, fs_type;
+type proc_tpd_gesture, fs_type, proc_type;
 type sysfs_call_status, sysfs_type, fs_type;
 type sysfs_iio_devices, sysfs_type, fs_type;
