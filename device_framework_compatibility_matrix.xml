@@ -501,4 +501,16 @@
         <instance>imsrtpservice</instance>
     </interface>
 </hal>
+<hal format="hidl" optional="true">
+    <name>com.qualcomm.qti.wifidisplayhal</name>
+    <version>1.0</version>
+    <interface>
+        <name>IDSManager</name>
+        <instance>wifidisplaydshal</instance>
+    </interface>
+    <interface>
+      <name>IHDCPSession</name>
+        <instance>wifidisplayhdcphal</instance>
+    </interface>
+</hal>
 </compatibility-matrix>
