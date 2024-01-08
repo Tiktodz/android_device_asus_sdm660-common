@@ -223,4 +223,9 @@
 
     <!-- If this is true, the message that USB is only being used for charging will be shown. -->
     <bool name="config_usbChargingMessage">false</bool>
+
+    <!-- Indicate whether closing the lid causes the device to go to sleep and opening
+         it causes the device to wake up.
+         The default is false. -->
+    <bool name="config_lidControlsSleep">true</bool>
 </resources>
