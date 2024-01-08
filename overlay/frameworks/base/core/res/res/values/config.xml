@@ -317,4 +317,7 @@
          that have a HWC implementation that can apply the matrix passed to setColorTransform
          without impacting power, performance, and app compatibility (e.g. protected content). -->
     <bool name="config_nightDisplayAvailable">true</bool>
+
+    <!-- If this is true, the message that USB is only being used for charging will be shown. -->
+    <bool name="config_usbChargingMessage">false</bool>
 </resources>
