@@ -59,6 +59,9 @@ TARGET_HW_DISK_ENCRYPTION := true
 # EXFAT
 TARGET_EXFAT_DRIVER := exfat
 
+# FCM
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
