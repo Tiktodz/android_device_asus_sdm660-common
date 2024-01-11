@@ -561,14 +561,4 @@
         </interface>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.usb</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUsb</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IUsb/default</fqname>
-    </hal>
 </manifest>

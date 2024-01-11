@@ -460,7 +460,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.asus_sdm660
+    android.hardware.usb@1.0-service.basic
 
 # Verity
 PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
@@ -476,9 +476,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
-
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 
 # Wifi
 PRODUCT_PACKAGES += \
