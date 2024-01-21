@@ -1,2 +1,5 @@
 binder_call(system_app, storaged)
 get_prop(system_app, vendor_persist_camera_prop)
+
+# Allow externalstorage access
+allow system_app mnt_pass_through_file:dir { create_dir_perms mounton };
