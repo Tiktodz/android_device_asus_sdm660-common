@@ -227,6 +227,3 @@ ro.surface_flinger.set_idle_timer_ms=80
 
 # UBWC
 vendor.video.disable.ubwc=1
-
-# Zygote
-zygote.critical_window.minute=10
