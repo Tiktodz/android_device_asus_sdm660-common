@@ -138,7 +138,7 @@ service vendor.cdsprpcd /vendor/bin/cdsprpcd
    disabled
 
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
-     class core
+   class core
 
 service ppd /system/vendor/bin/mm-pp-dpps
     class late_start
@@ -172,3 +172,5 @@ on property:sys.boot_completed=1
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count 3
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory 20
     write /sys/class/devfreq/soc:qcom,cpubw/min_freq 381
+    # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
+    stop statsd
