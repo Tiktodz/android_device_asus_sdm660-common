@@ -4,7 +4,7 @@ genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,came
 genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@2/video4linux/video5/wakeup u:object_r:sysfs_wakeup:s0
 
 # Double tap to wake
-genfscon proc /touchpanel/double_tap_enable               u:object_r:proc_touchpanel_double_tap_enable:s0
+genfscon proc /tpd_gesture               u:object_r:proc_tpd_gesture:s0
 
 # IIO device
 genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:rradc@4500/iio:device1/name                 u:object_r:sysfs_iio_devices:s0
