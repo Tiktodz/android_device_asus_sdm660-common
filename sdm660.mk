@@ -114,10 +114,8 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libgralloc.qti \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libtinyxml \
-    libqdMetaData \
-    libqdMetaData.vendor
+    libqdMetaData
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
