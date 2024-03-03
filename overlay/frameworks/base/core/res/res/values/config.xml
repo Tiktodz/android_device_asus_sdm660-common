@@ -165,6 +165,7 @@
         <item>"/system/lib64/libblas.so"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+        <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
     </string-array>
 
     <!-- Keep chosen default camera app pinned in memory for faster launching -->
