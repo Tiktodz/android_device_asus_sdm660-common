@@ -432,8 +432,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    SystemUIGoogle
+    SystemUI
 
 # Telephony
 PRODUCT_PACKAGES += \
