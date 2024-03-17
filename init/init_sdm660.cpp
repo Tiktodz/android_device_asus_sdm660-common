@@ -44,9 +44,6 @@
 using android::base::GetProperty;
 using std::string;
 
-string heapstartsize, heapgrowthlimit, heapsize,
-       heapminfree, heapmaxfree, heaptargetutilization;
-
 void property_override(string prop, string value)
 {
     auto pi = (prop_info*) __system_property_find(prop.c_str());
@@ -57,36 +54,13 @@ void property_override(string prop, string value)
         __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
 
-void check_device()
-{
+void set_avoid_gfxaccel_config() {
     struct sysinfo sys;
-
     sysinfo(&sys);
 
-    if (sys.totalram > 5072ull * 1024 * 1024) {
-        // from - phone-xhdpi-6144-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.5";
-        heapminfree = "8m";
-        heapmaxfree = "32m";
-    } else if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - phone-xxhdpi-4096-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.6";
-        heapminfree = "8m";
-        heapmaxfree = "16m";
-    } else {
-        // from - phone-xhdpi-2048-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "192m";
-        heapsize = "512m";
-        heaptargetutilization = "0.75";
-        heapminfree = "512k";
-        heapmaxfree = "8m";
+    if (sys.totalram <= 3072ull * 1024 * 1024) {
+        // Reduce memory footprint
+        property_override("ro.config.avoid_gfx_accel", "true");
     }
 }
 
@@ -106,13 +80,13 @@ void NFC_check()
 
 void vendor_load_properties()
 {
-    check_device();
+    set_avoid_gfxaccel_config();
     NFC_check();
 
-    property_override("dalvik.vm.heapstartsize", heapstartsize);
-    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_override("dalvik.vm.heapsize", heapsize);
-    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    property_override("dalvik.vm.heapminfree", heapminfree);
-    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("ro.bootimage.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
+    property_override("ro.system.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
+    property_override("ro.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
+    property_override("ro.vendor.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
+    property_override("ro.build.description", "meizu_PRO5-user 5.1 LMY47D m86.Flyme_OS_5.1460049852 release-keys");
+
 }
