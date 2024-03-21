@@ -288,7 +288,9 @@ vendor/bin/xtwifi-inet-agent|73eb9393ba634d805055eea3fbea64785063be4b
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 -vendor/lib/libqsocket.so|50079ff493b17465ff8f44d8210d26e3c7279065
+vendor/lib/libcdfw.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|244050e4081a6bec273d5481916754b77a52890d
+vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so|558636f4fa4c17f29cb644c8c6e07766b7240005
 vendor/lib64/libaoa.so|e1811bbe6b98e90196e43bbc2f7c45946ecf89d2
 vendor/lib64/libdataitems.so|90379d3b3d036ed26bdad94a52a1cdf406f6b562
