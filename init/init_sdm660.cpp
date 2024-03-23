@@ -83,10 +83,10 @@ void vendor_load_properties()
     set_avoid_gfxaccel_config();
     NFC_check();
 
-    property_override("ro.bootimage.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
-    property_override("ro.system.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
-    property_override("ro.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "Meizu/meizu_PRO5/PRO5:5.1/LMY47D/m86.Flyme_OS_5.1460049852:user/release-keys");
-    property_override("ro.build.description", "meizu_PRO5-user 5.1 LMY47D m86.Flyme_OS_5.1460049852 release-keys");
+    property_override("ro.bootimage.build.fingerprint", "HUAWEI/CAN-L11/HWCAN:7.0/HUAWEICAN-L11/C432B382:user/release-keys");
+    property_override("ro.system.build.fingerprint", "HUAWEI/CAN-L11/HWCAN:7.0/HUAWEICAN-L11/C432B382:user/release-keys");
+    property_override("ro.build.fingerprint", "HUAWEI/CAN-L11/HWCAN:7.0/HUAWEICAN-L11/C432B382:user/release-keys");
+    property_override("ro.vendor.build.fingerprint", "HUAWEI/CAN-L11/HWCAN:7.0/HUAWEICAN-L11/C432B382:user/release-keys");
+    property_override("ro.build.description", "CAN-L11-user 7.0 HUAWEICAN-L11 C432B382 release-keys");
 
 }
