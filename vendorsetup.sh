@@ -1,6 +1,8 @@
 rm -rf device/asus/X00T
+rm -rf device/asus/X00TD
 rm -rf vendor/asus
 rm -rf system/core
+rm -rf device/asus/sdm660-common
 
 # Audio
 rm -rf hardware/qcom-caf/msm8998/audio
@@ -8,6 +10,7 @@ git clone https://github.com/lineageX00T/hardware_qcom-caf_msm8998_audio hardwar
 
 # Device
 git clone https://github.com/Tiktodz/device_asus_X00TD -b nad device/asus/X00TD
+git clone https://github.com/Tiktodz/android_device_asus_sdm660-common -b nad device/asus/sdm660-common
 
 # Kernel
 git clone https://github.com/aslenofarid/kernel_asus_sdm660 -b lineage-17.1 kernel/asus/sdm660
