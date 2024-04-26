@@ -27,8 +27,6 @@
 #
 #
 
-    write /sys/devices/virtual/graphics/fb0/idle_time 100
-
     # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
 
